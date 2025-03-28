@@ -1,21 +1,31 @@
 function Skills() {
+    const skills = [
+      "HTML / CSS",
+      "Javascript",
+      "React",
+      "Figma",
+      "Canva",
+      "Python",
+      "SQL",
+      "Git",
+      "GitHub",
+      "Node.js",
+      "Java"
+    ];
+  
     return (
       <section className="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>HTML / CSS / JavaScript</li>
-            <li>React</li>
-            <li>Figma</li>
-            <li>Canva</li>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Git</li>
-            <li>GitHub</li>
-            <li>Node.js</li>
-            <li>Java</li>
-            </ul>
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <div className="skill-card" key={index}>
+              <div className="skill-item">{skill}</div>
+            </div>
+          ))}
+        </div>
       </section>
     );
   }
   
-  export default Skills;  
+  export default Skills;
+  

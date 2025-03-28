@@ -22,7 +22,6 @@ function App() {
         <img src={myPhoto} alt="Myphoto" className="icon" />
       </section>
 
-
       {/* 以下分割したパーツたち */}
       <About />
       <Skills />
