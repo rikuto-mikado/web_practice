@@ -1,9 +1,13 @@
 function Projects() {
     return (
-      <section className="projects">
+    <section className="projects">
         <h2>Projects</h2>
-        <p>Here are some of my works. (後でカードにして追加する！)</p>
-      </section>
+        <div className="projects-grid">
+        <div className="project-card placeholder">
+            <p>Coming soon...</p>
+        </div>
+        </div>
+    </section>
     );
   }
   
