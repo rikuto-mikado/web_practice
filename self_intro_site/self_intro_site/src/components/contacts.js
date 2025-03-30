@@ -1,3 +1,4 @@
+import '../styles/skills.css';
 function Contacts() {
     return (
       <section className="contact">

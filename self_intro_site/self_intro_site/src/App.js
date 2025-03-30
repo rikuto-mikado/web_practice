@@ -1,5 +1,5 @@
 import './App.css';
-import myPhoto from './photo/icon.jpg';
+import Hero from './components/hero.js';
 import About from './components/about.js';
 import Skills from './components/skills.js';
 import Projects from './components/projects.js';
@@ -13,16 +13,7 @@ function App() {
         {/* navとかLogoあればここに残す */}
       </header>
 
-      {/* Hero section */}
-      <section className="hero">
-        <div className="hero-text">
-        <h1>Hi, I'm Rikuto Mikado</h1>
-        <p>I'm a web developer based in Japan.</p>
-        </div>
-        <img src={myPhoto} alt="Myphoto" className="icon" />
-      </section>
-
-      {/* 以下分割したパーツたち */}
+      <Hero />
       <About />
       <Skills />
       <Projects />

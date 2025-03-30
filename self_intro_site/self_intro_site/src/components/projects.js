@@ -1,3 +1,4 @@
+import '../styles/projects.css'; 
 function Projects() {
     return (
     <section className="projects">
