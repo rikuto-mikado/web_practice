@@ -1,4 +1,5 @@
 import './App.css';
+import Header from './components/header.js'
 import Hero from './components/hero.js';
 import About from './components/about.js';
 import Skills from './components/skills.js';
@@ -13,17 +14,13 @@ function App() {
         {/* navとかLogoあればここに残す */}
       </header>
 
+      <Header />
       <Hero />
       <About />
       <Skills />
       <Projects />
       <Contacts />
-
-      {/* Footer */}
-      <footer className="footer">
-        <p>© 2025 Rikuto Mikado</p>
-      </footer>
-    </div>
+      </div>
   );
 }
 

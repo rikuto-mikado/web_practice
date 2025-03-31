@@ -1,0 +1,35 @@
+.contact {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 60px auto 80px;
+    border-radius: 50% 20% / 10% 40%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.contact h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #faa61a;
+    margin: 12px auto 0;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}

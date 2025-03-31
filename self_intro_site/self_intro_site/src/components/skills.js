@@ -1,7 +1,8 @@
+import '../styles/skills.css';
 function Skills() {
     const skills = [
       "HTML / CSS",
-      "Javascript",
+      "JavaScript",
       "React",
       "Figma",
       "Canva",
@@ -14,7 +15,7 @@ function Skills() {
     ];
   
     return (
-      <section className="skills">
+      <section id = "skills" className="skills">
         <h2>Skills</h2>
         <div className="skills-grid">
           {skills.map((skill, index) => (
@@ -27,5 +28,5 @@ function Skills() {
     );
   }
   
-  export default Skills;
+export default Skills;
   

@@ -1,7 +1,7 @@
 import '../styles/projects.css'; 
 function Projects() {
     return (
-    <section className="projects">
+    <section id = "projects" className="projects">
         <h2>Projects</h2>
         <div className="projects-grid">
         <div className="project-card placeholder">
@@ -12,5 +12,5 @@ function Projects() {
     );
   }
   
-  export default Projects;
+export default Projects;
   

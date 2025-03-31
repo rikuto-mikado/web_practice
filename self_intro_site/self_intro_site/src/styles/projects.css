@@ -41,7 +41,7 @@
   
   .project-card:hover {
     transform: translateY(-4px);
-    background-color: #efefef;
+    background-color: #eaeaea;
   }
   
   .placeholder {

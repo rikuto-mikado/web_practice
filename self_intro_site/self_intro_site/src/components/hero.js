@@ -3,7 +3,7 @@ import myPhoto from '../photo/icon.jpg'; // ← ← フォルダ構成に合わ�
 
 function Hero() {
   return (
-    <section className="hero">
+    <section id = "hero" className="hero">
       <div className="hero-text">
         <h1>Hi, I'm Rikuto Mikado</h1>
         <p>I'm a web developer based in Japan.</p>
