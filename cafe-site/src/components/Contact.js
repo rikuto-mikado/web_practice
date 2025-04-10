@@ -1,11 +1,13 @@
+// Contact.js
+import "../styles/SplitSection.css";
 import "../styles/Contact.css";
 import contactImg from "../photo/cafe-site-contact.png";
 
 function Contact() {
   return (
-    <div className="contact-container">
+    <div className="split-section">
       <div className="contact-left">
-        <img src={contactImg} alt="店の外観" />
+        <img src={contactImg} alt="atmosphere" />
       </div>
       <div className="contact-right">
         <h2>Contact</h2>

@@ -1,17 +1,35 @@
-// Menu.jsx
+import "../styles/SplitSection.css";
 import "../styles/Menu.css";
 import menuImg from "../photo/cafe-site-menu.png";
 import coffee1 from "../photo/cafe-site-menu01.png";
 
+
 const menuItems = [
-  { image: coffee1, name: "クラシックブレンド", price: "¥500" }
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
+  { image: coffee1, name: "クラシックブレンド", price: "¥500" },
 ];
 
 function Menu() {
   return (
-    <div className="menu-split">
+    <div className="split-section">
       <div className="menu-left">
-        <img src={menuImg} alt="メニュー画像" />
+        <img src={menuImg} alt="menu" />
       </div>
       <div className="menu-right">
         <h2>メニュー</h2>
