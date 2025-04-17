@@ -53,3 +53,18 @@
     cursor: pointer;
   }
   
+  @media (max-width: 768px) {
+    .contact-right {
+      padding: 2rem 1rem;
+    }
+  
+    .contact-right form {
+      width: 100%;
+    }
+  
+    .contact-right input,
+    .contact-right textarea {
+      width: 100%;
+    }
+  }
+  

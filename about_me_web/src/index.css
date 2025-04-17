@@ -11,13 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* グローバルに入れてもOK */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", sans-serif;
-}

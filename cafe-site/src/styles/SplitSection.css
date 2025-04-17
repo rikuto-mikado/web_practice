@@ -61,3 +61,96 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .split-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left,
+  .right,
+  .home-left,
+  .home-right,
+  .menu-left,
+  .menu-right,
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .left img,
+  .home-left img,
+  .menu-left img,
+  .contact-left img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .menu-left {
+    position: relative; /* sticky解除 */
+    height: 250px;
+  }
+
+  .menu-left img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .menu-right,
+  .home-right,
+  .contact-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* --- ホーム画像高さ（再掲：念のため） --- */
+  .home-left {
+    height: 220px;
+  }
+
+  /* --- ホーム右側テキストエリア調整 --- */
+  .home-right {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-right h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-right p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .home-right .button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .contact-right form {
+    width: 100%;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    width: 100%;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+}

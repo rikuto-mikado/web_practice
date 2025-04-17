@@ -55,13 +55,14 @@
   width: fit-content;
 }
 
-
-
 @media (max-width: 768px) {
-  .menu-right h2 {
-    font-size: 1.8rem;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
+  .menu-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .menu-right {
+    padding: 1.5rem;
   }
 }
