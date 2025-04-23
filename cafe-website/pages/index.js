@@ -1,11 +1,11 @@
-import HeroSection from "@/components/HeroSection";
-import LocationSection from "@/components/LocationSection";
+import SplitLayout from "@/components/SplitLayout";
 
 export default function Home() {
   return (
     <main>
-      <HeroSection />
-      <LocationSection />
+
+      <SplitLayout />
+
     </main>
   );
 }

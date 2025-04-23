@@ -1,6 +1,6 @@
 export default function LocationSection() {
     return (
-      <section className="bg-white py-16 px-4 text-center">
+      <section className="bg-neutral-100 shadow-md rounded-2xl py-16 px-12 text-center w-full">
         <h2 className="text-2xl font-bold mb-4">how to access</h2>
         <p className="mb-2">〒123-4567 東京都渋谷区カフェ通り1-2-3</p>
         <p className="mb-2">営業時間：10:00~20:00</p>
