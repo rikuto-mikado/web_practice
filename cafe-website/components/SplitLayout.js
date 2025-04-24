@@ -33,7 +33,7 @@ export default function SplitLayout() {
 
   return (
     <section className="flex flex-col md:flex-row h-screen">
-      <div className="relative md:w-1/2 w-full h-64 md:h-full">
+      <div className="relative md:w-1/2 w-full h-64 md:h-full hidden md:block">
         <Image
           src="/cafe-site-home.png"
           alt="cafe_interior"
