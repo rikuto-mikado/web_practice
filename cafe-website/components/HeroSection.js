@@ -8,6 +8,7 @@ const images = [
 
 export default function HeroSection({ onMenu, onContact }) {
   const [bgIndex, setBgIndex] = useState(0);
+  const [fade, setFade] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -22,22 +23,33 @@ export default function HeroSection({ onMenu, onContact }) {
   useEffect(() => {
     if (!isMobile) return;
     const interval = setInterval(() => {
-      setBgIndex((prev) => (prev + 1) % images.length);
+      setFade(false); // フェードアウト開始
+      setTimeout(() => {
+        setBgIndex((prev) => (prev + 1) % images.length);
+        setFade(true);
+      }, 300);
     }, 5000);
     return () => clearInterval(interval);
   }, [isMobile]);
-
   return (
-  
-  
-  <div className="w-screen min-h-screen md:min-h-0 flex flex-col justify-center items-center text-center px-0 md:px-6 py-10
-  bg-cover bg-center md:bg-none text-white md:text-[#5c4033] overflow-hidden transition-all duration-1000"
-  style={isMobile ? { backgroundImage: `url(${images[bgIndex]})` } : {}}>
-
-
+    <div
+    className="w-full max-w-full min-h-screen overflow-x-hidden md:min-h-0
+    flex flex-col justify-center items-center text-center
+    px-0 md:px-6 py-10 bg-cover bg-center md:bg-none
+    text-white md:text-[#5c4033] overflow-hidden transition-all duration-1000"
+    style={
+      isMobile
+        ? {
+            backgroundImage: `url(${images[bgIndex]})`,
+            opacity: fade ? 1 : 0,
+            transition: "opacity 0.5s ease-in-out",
+         }
+        : {}
+     }
+    >
       <div className="md:bg-transparent p-6 rounded-md">
         <h1 className="text-5xl font-extrabold mb-6 tracking-wide">
-          Welcome to<br />Classic Café
+          Love Latte
         </h1>
         <p className="text-xl md:text-lg mb-10">ゆったりとした時間をあなたに。</p>
         <div className="flex flex-col md:flex-row gap-4">
