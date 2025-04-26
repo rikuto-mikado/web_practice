@@ -47,6 +47,7 @@ export default function HeroSection({ onMenu, onContact }) {
         : {}
      }
     >
+
       <div className="md:bg-transparent p-6 rounded-md">
         <h1 className="text-5xl font-extrabold mb-6 tracking-wide">
           Love Latte

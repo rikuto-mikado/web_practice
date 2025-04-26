@@ -70,8 +70,8 @@ export default function SplitLayout() {
           className="w-full h-full object-cover transition-opacity duration-1000"
         />
       </div>
-      <div className="md:w-1/2 w-full bg-[#fefaf6] text-[#5c4033] flex flex-col p-6 overflow-y-auto">
-        {renderRightContent()}
+      <div className="md:w-1/2 w-full bg-transparent md:bg-[#fefaf6] text-[#5c4033] flex flex-col p-0 md:p-6 overflow-y-auto">
+      {renderRightContent()}
       </div>
     </section>
   );
