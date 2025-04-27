@@ -38,7 +38,7 @@ npm install
 npm run dev
 
 ## ✨ Demo
-(Write your deployed URL here after uploading to Vercel or similar.)
+https://web-practice-snowy.vercel.app
 
 ## 👤 Author
 rikuto-mikado
