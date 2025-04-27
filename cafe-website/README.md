@@ -29,19 +29,19 @@ Background images rotate automatically every 5 seconds.
 Fully responsive layout (adjusts perfectly across devices).
 
 ## 📂 Installation
-bash
-Copy
-Edit
-git clone https://github.com/rikuto-mikado/classic-cafe.git
-cd classic-cafe
+```bash
+git clone https://github.com/rikuto-mikado/web_practice.git
+cd web_practice/cafe-website
 npm install
 npm run dev
+```
 
 ## ✨ Demo
-https://web-practice-snowy.vercel.app
+[Live Site](https://web-practice-snowy.vercel.app)
 
 ## 👤 Author
 rikuto-mikado
+[GitHub Profile](https://github.com/rikuto-mikado)
 
 ## 📜 License
 This project follows the license provided in the parent repository (web_practice).
