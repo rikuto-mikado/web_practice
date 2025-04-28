@@ -1,6 +1,6 @@
 export default function ContactSection() {
     return (
-        <section className='py-16 px-4 bg-white text-[#5c4033]'>
+        <section className='py-16 px-4 min-h-screen bg-[#fefaf6] text-[#5c4033]'>
             <h2 className='text-3xl font-bold mb-6 text-center'>お問い合わせ</h2>
             <form
             // This form is currently a dummy form for display purposes only.

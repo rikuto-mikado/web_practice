@@ -9,7 +9,7 @@ const menuItems = [
 
 export default function MenuSection() {
   return (
-    <section className="w-full flex flex-col items-center px-4 py-8">
+    <section className="w-full flex flex-col min-h-screen bg-[#fefaf6] items-center px-4 py-8">
       <h2 className="text-3xl font-bold text-[#5c4033] mb-8">Menu</h2>
 
       <div className="grid grid-cols-2 gap-6 w-full max-w-md sm:max-w-xl">

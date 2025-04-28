@@ -62,7 +62,7 @@ export default function SplitLayout() {
   };
 
   return (
-    <section className="flex flex-col md:flex-row h-screen overflow-x-hidden">
+    <section className="flex flex-col md:flex-row h-screen min-h-screen bg-[#fefaf6] overflow-x-hidden">
       <div className="relative md:w-1/2 w-full h-64 md:h-full hidden md:block">
         <img
           src={images[bgIndex]}
