@@ -4,10 +4,10 @@ body {
     margin: 50px 50px 0 50px;
     display: flex;
     flex-direction: column;
-    min-height: 95vh;
+    min-height: 100vh;
     color: #ffffff;
 
-    background-image: url("../images/bread_page 2.jpg");
+    background-image: url("../images/bread_page 5.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,17 +46,18 @@ header {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.hero h1 {
+.access h1 {
     font-size: 5rem;
+    text-align: center;
+}
+
+.access p {
+    text-align: center;
 }
 
 .logo {
     width: 150px;
     margin: -30px;
-}
-
-.passion {
-    color: #f5aa3c;
 }
 
 .hamburger {
@@ -174,7 +175,7 @@ header {
     }
     
     .hero h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         text-align: center;
     }
     

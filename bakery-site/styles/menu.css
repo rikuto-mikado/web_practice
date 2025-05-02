@@ -4,7 +4,7 @@ body {
     margin: 50px 50px 0 50px;
     display: flex;
     flex-direction: column;
-    min-height: 95vh;
+    min-height: 100vh;
     color: #ffffff;
 
     background-image: url("../images/bread_page 3.jpg");
@@ -69,7 +69,7 @@ header {
     
     background-color: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(12px);
-    border-radius: 1rem;
+    border-radius: 5rem;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -203,13 +203,18 @@ header {
     .custom-list a:hover {
         color: #f5aa3c !important;
     }
+
+    .logo {
+        width: 100px;
+        margin: -30px;
+    }
     
-    .hero h1 {
-        font-size: 4rem;
+    .menu h1 {
+        font-size: 3.5rem;
         text-align: center;
     }
     
-    .hero p {
+    .menu p {
         text-align: center;
     }
 }

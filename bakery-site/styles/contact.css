@@ -4,10 +4,10 @@ body {
     margin: 50px 50px 0 50px;
     display: flex;
     flex-direction: column;
-    min-height: 95vh;
+    min-height: 100vh;
     color: #ffffff;
 
-    background-image: url("../images/bread_page 2.jpg");
+    background-image: url("../images/bread_page 4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ header {
     margin: -30px;
 }
 
-.passion {
+.us {
     color: #f5aa3c;
 }
 
@@ -72,6 +72,58 @@ header {
 
 .close-btn {
     display: none;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact-form {
+    padding: 40px 20px;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    border-radius: 5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding-bottom: .1rem;
+}
+
+.contact-form buttom {
+    background-color: #f5aa3c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e19925;
+}
+
+.contact h1 {
+    font-size: 5rem;
+}
+
+.word-contact {
+    color: #f5aa3c;
 }
 
 @media (max-width: 680px) {
@@ -168,19 +220,28 @@ header {
     .custom-list a:hover {
         color: #f5aa3c !important;
     }
-    
+
     .logo {
         width: 100px;
         margin: -30px;
     }
     
-    .hero h1 {
-        font-size: 4rem;
+    .contact h1 {
+        font-size: 3.5rem;
         text-align: center;
     }
     
-    .hero p {
+    .contact p {
         text-align: center;
+    }
+
+    .contact-form button {
+        padding: 15px;
+        font-size: 1.2rem;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
     }
 }
 
