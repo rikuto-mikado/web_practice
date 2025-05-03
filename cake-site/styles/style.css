@@ -1,0 +1,27 @@
+body {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 50px 50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+
+    background-image: url('../images/cake-site_home.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+.pink-color {
+    color: #FC6C85;
+}
+
+.home h1 {
+    font-size: 5rem;
+}
