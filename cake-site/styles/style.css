@@ -1,12 +1,15 @@
 body {
     position: relative;
     font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 50px 50px 0 50px;
+    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     color: white;
+
+    margin: 0;
+  padding: 50px 50px 0 50px;
+  
 
     background-image: url('../images/cake-site_home.png');
     background-size: cover;
@@ -18,10 +21,25 @@ body {
     -webkit-backdrop-filter: blur(7px);
 }
 
-.pink-color {
+.highlight {
     color: #FC6C85;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .home h1 {
     font-size: 5rem;
 }
+
+.home p {
+    font-size: 1rem;
+}
+
+.logo {
+    width: 150px;
+    margin: -30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+  }
