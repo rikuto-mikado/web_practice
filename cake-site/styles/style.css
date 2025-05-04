@@ -1,16 +1,13 @@
 body {
     position: relative;
     font-family: "Poppins", sans-serif;
-    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     color: white;
-
     margin: 0;
-  padding: 50px 50px 0 50px;
+    padding: 50px 50px 0 50px;
   
-
     background-image: url('../images/cake-site_home.png');
     background-size: cover;
     background-position: center;
@@ -19,6 +16,52 @@ body {
 
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(7px);
+}
+
+.hamburger {
+    position: absolute;
+    right: 30px;
+    font-size: 4rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 100px;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    border-radius: 0 0 0 1rem;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav li {
+    margin-bottom: 1rem;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .highlight {
@@ -39,7 +82,41 @@ body {
     margin: -30px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-  }
+
+@media (max-width: 680px) {
+    .logo {
+        
+
+        width: 100px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+       
+    }
+
+    header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    .hamburger {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 3rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .home h1 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    
+}
