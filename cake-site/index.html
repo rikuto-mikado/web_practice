@@ -7,16 +7,16 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel = 'stylesheet' href = 'styles/style.css'>
 
-        <link rel="icon" type="images/png" href="images/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="images/svg+xml" href="images/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+        <link rel="shortcut icon" href="images/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+        <link rel="manifest" href="images/site.webmanifest" />
 
         <script src = 'script.js' defer></script>
     </head>
     <body>
-        <nav class = 'mobile-nav' id = 'mobile-nav'>
+        <nav class = 'mobile-nav' id = 'mobileNav'>
             <ul>
                 <li><a href = 'index.html'>Home</a></li>
                 <li><a href = 'menu.html'>Menu</a></li>
@@ -26,11 +26,15 @@
 
         <header>
             <img class="logo" src="images/cake-site_icon.png" alt="logo">
-            <button class="hamburger" id="hamburger">☰</button>
+            <div id="hamburger" class="hamburger" role="button" tabindex="0" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>              
         </header>
 
         <section class = 'home' id ='home'>
-            <h1>We Frost with Care, <br/> <span class = 'highlight'>Serve</span> with Cheer!!</h1>
+            <h1><span class = 'highlight'>We</span> Frost with Care, <br/> <span class = 'highlight'>Serve</span> with Cheer!!</h1>
             <p>Indulge in sweet moments, crafted with love and care.</p>
         </section>
     </body>
