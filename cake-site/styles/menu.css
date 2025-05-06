@@ -62,11 +62,11 @@ body.fade-out {
     transform: translateY(-50%) rotate(45deg);
 }
   
-  .hamburger.clicked span:nth-child(2) {
+.hamburger.clicked span:nth-child(2) {
     opacity: 0;
 }
   
-  .hamburger.clicked span:nth-child(3) {
+.hamburger.clicked span:nth-child(3) {
     bottom: auto;
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
@@ -116,10 +116,48 @@ header {
     color: white;
     text-decoration: none;
     font-size: 2rem;
-} 
+}
 
-.home p {
-    font-size: 1rem;
+.menu {
+    max-width: 700px; 
+    margin: 0 auto;
+    padding: .5rem 1rem 3rem 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+}
+
+.menu-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    text-align: center;
+    color: white;
+}
+
+.menu img {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+}
+
+.menu-item img:hover {
+    transform: scale(1.05);
+}
+
+.menu-item p {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.4rem;
+    color: white;
 }
 
 .logo {
@@ -130,13 +168,10 @@ header {
 
 @media (max-width: 680px) {
     .logo {
-        
-
         width: 100px;
         position: absolute;
         top: 20px;
         left: 20px;
-       
     }
 
     header {

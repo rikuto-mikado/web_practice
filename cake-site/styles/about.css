@@ -1,0 +1,182 @@
+html {
+    background-image: url('../images/cake-site_home.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+body {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    margin: 0;
+    padding: 50px 50px 0 50px;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    right: 30px;
+    width: 40px;
+    height: 30px;
+}
+
+.hamburger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+    bottom: 0;
+}
+
+.hamburger.clicked span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+  
+  .hamburger.clicked span:nth-child(2) {
+    opacity: 0;
+}
+  
+  .hamburger.clicked span:nth-child(3) {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+  
+  
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 100px;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 25vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.mobile-nav li {
+    margin-bottom: 1.5rem;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+} 
+
+.about {
+    max-width: 700px; 
+    margin: 0 auto;
+    padding: .5rem 1rem 3rem 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+}
+
+.about p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    width: 150px;
+    margin: -30px;
+}
+
+
+@media (max-width: 680px) {
+    .logo {
+        
+
+        width: 100px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+       
+    }
+
+    header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        z-index: 100;
+        right: 10px;
+        top: 30px;
+        width: 40px;
+        height: 30px;
+    }
+
+    .home h1 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .home p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+}
