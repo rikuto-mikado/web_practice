@@ -5,9 +5,31 @@ body {
     background-color: #f5f4f1;;
 }
 
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 header img {
     position: relative;
     width: 250px;
+}
+
+.reserve-link {
+    background-color: black;  
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.reserve-link:hover {
+    background-color: #333;
 }
 
 .main {
@@ -39,9 +61,9 @@ header img {
     display: flex;
     justify-content: right;
     align-items: flex-start;
-    margin-top: 60px;
     gap: 0px;
-    margin-top: 450px;
+    margin-top: 400px;
+    margin-bottom: 100px;
 }
 
 .salon-home03 {
@@ -64,4 +86,49 @@ header img {
     font-family: 'serif';
     justify-content: flex-start;
     margin-top: 1200px;
+}
+
+.photo-group03 {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 0px;
+    margin-top: 400px;
+    margin-bottom: 100px;
+}
+
+.salon-home05 {
+    width: 500px;
+    height: auto;
+}
+
+.salon-home06 {
+    width: 300px;
+    height: auto;
+}
+
+.vertical-caption03 {
+    position: absolute;
+    left: 1100px;
+    top: 100px;
+    font-size: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: upleft;
+    font-family: 'serif';
+    justify-content: flex-start;
+    margin-top: 2200px;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-brand {
+  font-size: 1.5rem;
+  color: black;
+  padding: 0 10px 0 0;
+  display: inline-block;
+  font-style: italic;
+  text-decoration: underline
 }
