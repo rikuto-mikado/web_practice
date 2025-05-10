@@ -29,8 +29,39 @@ header img {
     left: 1100px;
     top: 400px;
     font-size: 1rem;
-     writing-mode: vertical-rl;
-     text-orientation: upright;
-     font-family: 'serif';
-     justify-content: flex-end;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: 'serif';
+    justify-content: flex-end;
+}
+
+.photo-group02 {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    margin-top: 60px;
+    gap: 0px;
+    margin-top: 450px;
+}
+
+.salon-home03 {
+    width: 450px;
+    height: auto;
+}
+
+.salon-home04 {
+    width: 500px;
+    height: auto;
+}
+
+.vertical-caption02 {
+    position: absolute;
+    left: 200px;
+    top: 100px;
+    font-size: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: upleft;
+    font-family: 'serif';
+    justify-content: flex-start;
+    margin-top: 1200px;
 }
