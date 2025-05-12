@@ -36,87 +36,71 @@ header img {
     position: relative;
 }
 
+.photo-caption-block {
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 100px 0;
+    grid-template-columns: 1.5fr 1fr;
+    margin-bottom: 200px;
+}
+
+.photo-set {
+    position: relative;
+}
+
+.photo-caption-block {
+    position: relative;
+}
+
+.caption-text01 {
+    max-width: 300px;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-family: 'serif';
+}
+
 .salon-home01 {
     position: relative;
-    width: 550px;
+    width: 500px;
+    height: auto;
+    z-index: 1;
 }
 
 .salon-home02 {
     position: absolute;
     width: 300px;
-}
-
-.vertical-caption01 {
-    position: absolute;
-    left: 1100px;
-    top: 400px;
-    font-size: 1rem;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    font-family: 'serif';
-    justify-content: flex-end;
-}
-
-.photo-group02 {
-    display: flex;
-    justify-content: right;
-    align-items: flex-start;
-    gap: 0px;
-    margin-top: 400px;
-    margin-bottom: 100px;
+    height: auto;
+    z-index: 0;
 }
 
 .salon-home03 {
+    position: relative;
     width: 450px;
     height: auto;
 }
 
 .salon-home04 {
-    width: 500px;
+    position: absolute;
+    width: 350px;
     height: auto;
 }
 
-.vertical-caption02 {
-    position: absolute;
-    left: 200px;
-    top: 100px;
-    font-size: 1rem;
-    writing-mode: vertical-rl;
-    text-orientation: upleft;
-    font-family: 'serif';
-    justify-content: flex-start;
-    margin-top: 1200px;
-}
-
-.photo-group03 {
-    display: flex;
-    justify-content: left;
-    align-items: flex-start;
-    gap: 0px;
-    margin-top: 400px;
-    margin-bottom: 100px;
-}
-
 .salon-home05 {
-    width: 500px;
+    position: relative;
+    width: 450px;
     height: auto;
 }
 
 .salon-home06 {
-    width: 300px;
-    height: auto;
-}
-
-.vertical-caption03 {
     position: absolute;
-    left: 1100px;
-    top: 100px;
-    font-size: 1rem;
-    writing-mode: vertical-rl;
-    text-orientation: upleft;
-    font-family: 'serif';
-    justify-content: flex-start;
-    margin-top: 2200px;
+    width: 350px;
+    height: auto;
 }
 
 .site-footer {
@@ -149,37 +133,307 @@ header img {
   text-align: center; 
 }
 
-@media(max-width: 768px) {
-    header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
+@media(max-width: 900px) {
+    body {
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        color: black;
+        background-color: #f5f4f1;;
+    }
     
-  }
-  
-  .salon-icon {
-    width: 180px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
+    header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    header img {
+        position: relative;
+        width: 250px;
+    }
+    
+    .reserve-link {
+        background-color: black;  
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        padding: 20px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    
+    .reserve-link:hover {
+        background-color: #333;
+    }
+    
+    .main {
+        position: relative;
+    }
+    
+    .photo-caption-block {
+        display: grid;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin: 100px 0;
+        grid-template-columns: 1.5fr 1fr;
+        margin-bottom: 200px;
+    }
+    
+    .photo-set {
+        position: relative;
+    }
+    
+    .photo-caption-block {
+        position: relative;
+    }
+    
+    .caption-text01 {
+        max-width: 300px;
+        line-height: 1.6;
+        font-size: 1.3rem;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-family: 'serif';
+        padding-right: 5rem;
+    }
+    
+    .salon-home01 {
+        position: relative;
+        width: 350px;
+        height: auto;
+    }
+    
+    .salon-home02 {
+        position: absolute;
+        width: 200px;
+        height: auto;
+    }
+    
+    .salon-home03 {
+        position: relative;
+        width: 300px;
+        height: auto;
+    }
+    
+    .salon-home04 {
+        position: absolute;
+        width: 250px;
+        height: auto;
+    }
+    
+    .salon-home05 {
+        position: relative;
+        width: 300px;
+        height: auto;
+    }
+    
+    .salon-home06 {
+        position: absolute;
+        width: 250px;
+        height: auto;
+    }
+    
+    .site-footer {
+        background-color: #f5f4f1;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .footer-map-wrapper {
+        margin-bottom: 20px;
+    }
+    
+    .footer-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-brand {
+        font-size: 1.5rem;
+        color: black;
+        padding: 0;
+        display: inline-block;
+        font-style: italic;
+        text-decoration: underline;
+        text-align: center; 
+    }
+}
 
-  .reserve-link {
-    padding: 10px;
-    margin-bottom: 1rem;
-  }
 
-  .salon-home01 {
-    position: relative;
-    width: 300px;
-  }
 
-  .salon-home02 {
-    position: absolute;
-    width: 200px;
-  }
 
-  .vertical-caption01 {
-    display: none;
-  }
+
+
+
+
+@media(max-width: 786px) {
+    body {
+        overflow-x: hidden;
+        
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        color: black;
+        background-color: #f5f4f1;;
+    }
+    
+    header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    header img {
+        position: relative;
+        width: 250px;
+    }
+    
+    .reserve-link {
+        background-color: black;  
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        padding: 20px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    
+    .reserve-link:hover {
+        background-color: #333;
+    }
+    
+    .main {
+        position: relative;
+    }
+    
+    .photo-caption-block {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin: 100px 0;
+        grid-template-columns: 1.5fr 1fr;
+        margin-bottom: 200px;
+    }
+    
+    .photo-set {
+        position: relative;
+    }
+    
+    .photo-caption-block {
+        position: relative;
+    }
+    
+    .caption-text01 {
+        max-width: 300px;
+        line-height: 1.6;
+        font-size: 1rem;
+        font-family: 'serif';
+        writing-mode: horizontal-tb;
+        text-orientation: initial;
+        white-space: nowrap;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-family: 'serif';
+    }
+    
+    .salon-home01 {
+        position: relative;
+        width: 250px;
+        height: auto;
+    }
+    
+    .salon-home02 {
+        position: absolute;
+        width: 150px;
+        height: auto;
+        display: none;
+    }
+    
+    .salon-home03 {
+        position: relative;
+        width: 250px;
+        height: auto;
+        display: none;
+    }
+    
+    .salon-home04 {
+        position: absolute;
+        width: 250px;
+        height: auto;
+    }
+    
+    .salon-home05 {
+        position: relative;
+        width: 300px;
+        height: auto;
+        display: none;
+    }
+    
+    .salon-home06 {
+        position: absolute;
+        width: 250px;
+        height: auto;
+    }
+    
+    .site-footer {
+        background-color: #f5f4f1;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .footer-map-wrapper {
+        margin-bottom: 20px;
+    }
+    
+    .footer-map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-brand {
+        font-size: 1.5rem;
+        color: black;
+        padding: 0;
+        display: inline-block;
+        font-style: italic;
+        text-decoration: underline;
+        text-align: center; 
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 }
