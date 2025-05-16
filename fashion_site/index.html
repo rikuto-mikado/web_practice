@@ -9,6 +9,12 @@
         <script src = 'script.js' defer></script>
     </head>
     <body>
+
+        <div id = "loading">
+            <p>Loading...</p>
+            <div id = 'loading-screen'></div>
+        </div>
+
         <nav>
             <button id="menu-open" class="btn-menu">
                 <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
@@ -35,5 +41,56 @@
         <section class="hero">
             <h1 class="title">Maison Aura<br>Collection</h1>
         </section>
+
+        <section class = 'about'>
+            <div class = 'wrapper'>
+                <h2 class = "title fadein">About</h2>
+                <p class = 'fadein'>
+                    Masion Aura is a fashion brand that emobrace the beauty of simplicity and elegance. 
+                    Our collection is designed for those who appreciate the finer things in life, 
+                    with a focus on quality materials and timeless designs. 
+                    We believe that fashion should be effortless and comfortable, 
+                    allowing you to express your unique style without compromising on comfort.
+                </p>
+            </div>
+            <img src = "images/fashion_site_img_about.jpg" alt = ''>
+        </section>
+
+        <section class = 'collection'>
+            <div class = 'collection-image'>
+                <img src = 'images/fashion_site_img01.jpg' alt = ''>
+            </div>
+            <div class = 'collection-content wrapper'>
+                <h2 class = "title fadein">Lookbook</h2>
+                <ul class = 'collection-thumbnails'>
+                    <li class="fadein"><img src="images/fashion_site_img01.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/fashion_site_img02.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/fashion_site_img03.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/fashion_site_img04.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/fashion_site_img05.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/fashion_site_img06.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/fashion_site_img08.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/fashion_site_img09.jpg" alt=""></li>
+                    <li class="fadein"><img src="images/fashion_site_img10.jpg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class = 'contact'>
+            <div class = 'contact-content wrapper'>
+                <h2 class="title fadein">Shop</h2>
+                <p class = 'fadein'>
+                    Enjoy free shipping anytime. Shop conveniently through our online store.
+                </p>
+                <a class = 'btn fadein' href = ''>Online Shop</a>
+                <h3 class = 'fadein'>Shinjuku</h2>
+                <p class = 'fadein'>
+                    1-2-3 Shinjuku, Tokyo<br>
+                    Open Days: Friday, Saturday, Sunday & National Holidays<br>
+                    Opening Hours: 11:00 AM – 6:00 PM
+                </p>
+            </div>
+        </section>
+
     </body>
 </html>
