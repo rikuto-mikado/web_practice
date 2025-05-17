@@ -116,7 +116,7 @@ img {
     background-color: var(--brown);
     box-shadow: 0 0 2rem var(--brown);
     font-family: var(--oswald-font);
-    translate: 100vw;
+    translate: 100%;
 }
 
 .menu-list {
@@ -319,5 +319,36 @@ img {
     }
 }
 
+@media (max-width: 680px) {
 
+    .contact {
+    min-height: 50rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    }
+
+    .contact-content {
+        background: var(--white);
+        padding: 3rem;
+        position: absolute;
+        top: -8rem;
+        width: 90vw;
+        left: 0;
+        right: 0;
+        color: var(--brown);
+        text-shadow: none;
+    }
+
+    .contact-content {
+        background: var(--white);
+        padding: 6rem;
+        position: absolute;
+        top: -8rem;
+        width: 30vw;
+        left: 0;
+        right: 0;
+        color: var(--brown);
+        text-shadow: none;
+    }
+}
 
