@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 :root {
     --light-green: #d5edeb;
     --green: #63dbd0;
@@ -262,7 +263,6 @@ img {
         background: var(--light-green);
     }
 
-    /* SLIDE MENU */
     .btn-menu:hover {
         background-color: var(--light-green);
     }
@@ -318,4 +318,3 @@ img {
         height: 50rem;
     }
 }
-
