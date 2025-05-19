@@ -8,43 +8,178 @@
         <link rel = 'stylesheet' href = 'styles/style.css'>
         <script src = 'components/script.js' defer></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </head>
     <body>
+
+        <div id = "loading">
+            <p>Loading...</p>
+            <div id = 'loading-screen'></div>
+        </div>
         
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#"><img src = 'images/crop.svg' alt = '' height = 40 ></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link active" aria-current="page" href="#">ABOUT</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">SKILLS</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">PRODUCT</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">CONTACT</a>
+                        </li>
+
+
+                        
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="https://x.com/yourusername" target="_blank" aria-label="X">
+                            <i class="fab fa-x-twitter fa-lg"></i>
+                        </a>
+                        <a href="https://facebook.com/yourusername" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </nav>
 
+        <section class = 'hero' id="home">
+            <div class = 'container'>
+                <div class = 'hero-text'>
+                    <h1>Hi there,<br>I'm Rikuto <span class = 'text-color'>Mikado</span></h1>
+                    <p>A coder based in Hokkaido.</p>
+                </div>
+                <div class = 'hero-icon'>
+                    <img src = 'images/icon3.png' alt = ''>
+                </div>
+            </div>
+        </section>
+
+        <section class = 'about' id="about">
+
+        </section>
+
+        <section class = 'skills' id="skills">
+            <div class="card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                    <i class="fab fa-html5 fa-5x" style="color: #e34c26";></i>
+                    <h5 class="card-title mt-3">HTML</h5>
+                    <p class="card-text">Used for dynamic behavior in the browser.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                    <i class="fab fa-css3-alt fa-5x" style="color: #264de4";></i>
+                    <h5 class="card-title mt-3">CSS</h5>
+                    <p class="card-text">Used for dynamic behavior in the browser.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                    <i class="fab fa-js fa-5x" style="color: #f7df1e;"></i>
+                    <h5 class="card-title mt-3">JavaScript</h5>
+                    <p class="card-text">Used for dynamic behavior in the browser.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                    <i class="fab fa-react fa-5x" style="color: #61dbfb";></i>
+                    <h5 class="card-title mt-3">React</h5>
+                    <p class="card-text">Used for dynamic behavior in the browser.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                    <i class="fab fa-node-js fa-5x" style="color: #3c873a";></i>
+                    <h5 class="card-title mt-3">Node.js</h5>
+                    <p class="card-text">Used for dynamic behavior in the browser.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                    <i class="fab fa-git-alt fa-5x" style="color: #f1502f";></i>
+                    <h5 class="card-title mt-3">Git</h5>
+                    <p class="card-text">Used for dynamic behavior in the browser.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                    <i class="fab fa-github fa-5x" style="color: #000"></i>
+                    <h5 class="card-title mt-3">GitHub</h5>
+                    <p class="card-text">Used for dynamic behavior in the browser.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                    	<i class="fab fa-bootstrap fa-5x" style="color: #7952b3";></i>
+                    <h5 class="card-title mt-3">Bootstrap</h5>
+                    <p class="card-text">Used for dynamic behavior in the browser.</p>
+                </div>
+            </div>
+
+            <div class="card" style="width: 18rem; text-align: center;">
+                <div class="card-body">
+                    	<i class="fab fa-python fa-5x" style="color: #3776ab";></i>
+                    <h5 class="card-title mt-3">Python</h5>
+                    <p class="card-text">Used for dynamic behavior in the browser.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class = 'product' id="product">
+
+        </section>
+
+        <section class = 'contact' id="contact">
+
+        </section>
+
+        <footer>
+            <div class = 'footer-text'>
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
+                    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
+                    <ul class="nav col-md-4 justify-content-end">
+                        <li class="nav-item"><a href="#" class="nav-link px-1 text-muted">HOME</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-1 text-muted">ABOUT</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-1 text-muted">SKILLS</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-1 text-muted">PRODUCT</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-1 text-muted">CONTACT</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </footer>
     </body>
 </html>
