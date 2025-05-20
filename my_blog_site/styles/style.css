@@ -20,10 +20,12 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
+    margin-bottom: 1em;
 }
 
 
-.container {
+.hero-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +45,84 @@
 
 .text-color {
     color: var(--white);
+}
+
+/* ABOUT SECTION */
+.about {
+    background-image: url("../images/background6.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    margin-bottom: 1em;
+}
+
+/* SKILLS SECTION */
+.skills {
+    background-image: url('../images/background6.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    margin-bottom: 1em;
+}
+.skills-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 2rem;
+}
+
+.skill-card {
+    width: 8rem;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-0.4rem);
+}
+
+/* PRODUCT SECTION */
+.product {
+    background-image: url("../images/background6.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    margin-bottom: 1em;
+}
+
+/* CONTACT SECTION */
+.contact {
+    background-image: url("../images/background7.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    margin-bottom: 1em;
 }
 
 /* LOADING SCREEN */
@@ -75,18 +155,18 @@
     
     /* HERO SECTION */
     .hero {
-    background-image: url('../images/background4.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+        background-image: url('../images/background4.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
 
-    .container {
+    .hero-container {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
@@ -103,5 +183,27 @@
     .hero-icon img {
         max-width: 20rem;
         height: auto;
+    }
+
+    /* SKILLS SECTION */
+    .skills-card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        padding: 2rem;
+    }
+
+    .skill-card {
+        width: 5rem;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        transition: transform 0.3s;
+    }
+
+    .skill-card {
+        width: 5rem;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        transition: transform 0.3s;
     }
 }
