@@ -24,7 +24,6 @@
     margin-bottom: 1em;
 }
 
-
 .hero-container {
     display: flex;
     align-items: center;
@@ -47,21 +46,6 @@
     color: var(--white);
 }
 
-/* ABOUT SECTION */
-.about {
-    background-image: url("../images/background6.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
-    margin-bottom: 1em;
-}
-
 /* SKILLS SECTION */
 .skills {
     background-image: url('../images/background6.jpg');
@@ -82,6 +66,10 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     padding: 2rem;
+}
+
+.skills-text h2 {
+    font-size: 3rem;
 }
 
 .skill-card {
@@ -110,6 +98,15 @@
     margin-bottom: 1em;
 }
 
+.product-text h2 {
+    font-size: 3rem;
+}
+
+.product-icon img {
+    max-width: 20rem;
+    height: 40rem;
+}
+
 /* CONTACT SECTION */
 .contact {
     background-image: url("../images/background7.jpg");
@@ -124,6 +121,16 @@
 
     margin-bottom: 1em;
 }
+
+.contact-text h2 {
+    font-size: 3rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}
+
+
 
 /* LOADING SCREEN */
 #loading {
@@ -189,21 +196,26 @@
     .skills-card-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
         justify-items: center;
-        padding: 2rem;
+        padding: 1rem;
     }
 
     .skill-card {
         width: 5rem;
         text-align: center;
+        justify-items: center;
         padding: 1.5rem 1rem;
         transition: transform 0.3s;
     }
 
-    .skill-card {
-        width: 5rem;
-        text-align: center;
-        padding: 1.5rem 1rem;
-        transition: transform 0.3s;
+    .skills-text h2 {
+        margin-top: 5rem;
+    }
+
+    /* CONTACT SECTION */
+    .contact-form {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
