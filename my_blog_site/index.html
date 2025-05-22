@@ -35,7 +35,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">PRODUCT</a>
+                            <a class="nav-link active" aria-current="page" href="#">PROJECT</a>
                         </li>
 
                         <li class="nav-item">
@@ -126,19 +126,75 @@
             </div>
 
         </section>
-
-
-        <section class = 'product' id="product">
-            <div class = 'product-container'>
-                <div class = 'product-text'>
-                    <h2 style="text-align: center;">PRODUCT</h2>
+        
+        <section class="product" id="product">
+            <div class="product-container">
+                <div class="product-text">
+                    <h2 class="text-center">PROJECT</h2>
                 </div>
-                <div class = 'product-icon'>
-                    <img src = 'images/product01_01.png' alt = ''>
-                </div>
-            </div>
-
-        </section>
+                <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card mb-3 mx-auto border-0 align-items: center;" style="max-width:540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="images/project01.png"
+                                        class="img-fluid rounded-start w-60 w-md-100 mx-auto"
+                                        alt="Maison Aura Collection">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Maison Aura Collection</h5>
+                                            <p class="card-text">
+                                                This is the first website I ever built.
+                                                I experimented with animations to make the design more engaging.
+                                                The site includes a responsive hamburger menu for easy navigation.
+                                                It's a simple but meaningful project that reflects my learning journey.
+                                            </p>
+                                            <p class="card-text-url">
+                                                You can check it out
+                                                <a href="https://fashionsite-xi-ruby.vercel.app/"
+                                                target="_blank" rel="noopener noreferrer">here</a>
+                                            </p>
+                                            <p class="card-text">
+                                                <small class="text-body-secondary">Last updated 3 mins ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card mb-3 mx-auto" style="max-width:540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="images/project02.png"
+                                        class="img-fluid rounded-start w-60 w-md-100 mx-auto"
+                                        alt="Another Project">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Another Project</h5>
+                                            <p class="card-text">
+                                                A different project showcasing scroll-triggered animations
+                                                and a custom CMS back-end. Built mobile-first and optimized
+                                                for performance.
+                                            </p>
+                                            <p class="card-text-url">
+                                                Live demo
+                                                <a href="example.com"
+                                                target="_blank" rel="noopener noreferrer">here</a>
+                                            </p>
+                                            <p class="card-text">
+                                                <small class="text-body-secondary">Last updated 1 day ago</small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
         <section class = 'contact' id="contact">
 
@@ -168,7 +224,6 @@
                         <label for="exampleFormControlTextarea1" class="form-label">Text</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-
                 </div>
             </div>
         </section>
