@@ -7,8 +7,90 @@
         <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css'>
         <link rel = 'stylesheet' href = 'styles/style.css'>
         <script src = 'components/script.js' defer></script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     </head>
     <body>
+
+        <header>
+            <div class = 'wrapper'>
+                <a class = 'logo' href = '#hero'>ABC Hotel</a>
+                <nav>
+                    <button class = 'btn-menu'>Menu</button>
+                    <ul class = 'main-nav'>
+                        <li><a href='#about'>ABOUT</a></li>
+                        <li><a href='#news'>NEWS</a></li>
+                        <li><a href='#access'>ACCESS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id = 'hero'>
+
+            <div class = 'wrapper'>
+                <h1>ABC Hotel</h1>
+                <p class = 'hotel-date'>2021. 11. 7. 14:00 - 16:00</p>
+            </div>
+
+        </section>
+
+        <section id = 'about' class = 'wrapper'>
+            
+            <h2>About</h2>
+            <p>
+                WCB Conferenceとは、Webサイト制作を学びたい人たちが集まる勉強会です。
+                オンラインで開催しているので、世界中どこにいても参加できます。
+                最新のWebサイト制作やデザイントレンドを紹介し、それらの知識について参加者が話し合う時間も設けています。
+                一人で勉強を続けるだけでなく、仲間と交流しながら新しい可能性を一緒に探していきましょう。
+            </p>
+            <img src = 'images/hotel_site02.jpg' alt = ''>
+        </section>
+
+        <section id = 'news'>
+
+            <h2>News</h2>
+            <div class = 'wrapper'>
+                <table class = "news-table">
+                    <tr>
+                        <td class = 'news-date'>2021年10月16日</td>
+                        <td class= "news-content">参加登録を開始しました</td>
+                    </tr>
+                    <tr>
+                        <td class = 'news-date'>2021年10月10日</td>
+                        <td class = 'news-content'>WCB Conferenceの登壇者が決定しました</td>
+                    </tr>
+                    <tr>
+                        <td class="news-date">2021年10月2日</td>
+                        <td class="news-content">WCB ConferenceのWebサイトをリニューアルしました</td>
+                    </tr>
+                    <tr>
+                        <td class="news-date">2021年9月28日</td>
+                        <td class="news-content">WCB Conference開催決定！</td>
+                    </tr>
+                </table>
+            </div>
+
+        </section>
+
+        <section id = 'access' class = 'wrapper'>
+
+            <h2>Access</h2>
+            <p>
+                ABC Hotelは、東京都渋谷区に位置しています。
+                渋谷駅から徒歩5分の距離にあり、アクセスも非常に便利です。
+            </p>
+
+
+            <div class="footer wrapper">
+                <p>
+                    <a href="mailto:info@example.om">お問い合わせ</a> / <small>&copy; 2021 WCB Conference</small>
+                </p>
+            </div>
+
+        </section>
 
     </body>
 </html>
