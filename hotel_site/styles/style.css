@@ -50,11 +50,15 @@ h2,
 }
 
 /* LAYOUT */
-wrapper {
+.wrapper {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
     padding: 0 1rem;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 /* HEADER */
@@ -119,6 +123,7 @@ header a {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #hero h1 {
@@ -126,8 +131,7 @@ header a {
     margin-bottom: 1.5rem;
 }
 
-.hero-date {
-    text-align: center;
+.hotel-date {
     border-top: 3px solid var(--grey);
     border-bottom: 3px solid var(--grey);
     padding: .5rem 0;
@@ -142,11 +146,19 @@ header a {
     flex-direction: column;
     align-items: center;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 4rem 1rem;
 }
 
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
 #about p {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 #about img {
@@ -165,8 +177,16 @@ header a {
     background-size: cover;
     background-blend-mode: screen;
     height: 100vh;
+
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#news h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .news-table {
@@ -183,14 +203,21 @@ header a {
 }
 
 .news-date {
+    color: var(--grey);
     font-size: .875rem;
     padding-top: 1rem;
+
+    margin-bottom: 1.5rem;
 }
 
 .news-content {
+    color: var(--grey);
     padding-bottom: 1rem;
+
+    margin-bottom: 1.5rem;
 }
 
+/* ACCESS */
 #access {
     background-image: url("../images/hotel_site_03.jpg");
     background-repeat: no-repeat;
@@ -198,13 +225,11 @@ header a {
     background-size: cover;
     background-blend-mode: screen;
     height: 100vh;
-    display: flex;
     align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
-
-
-
-
 
 /* FOOTER */
 .footer {
@@ -223,9 +248,6 @@ header a {
 
 /* DESKTOP SCREEN STYLES */
 @media (min-width: 600px) {
-
-
-
 
 
     /* HEADER */
@@ -263,6 +285,17 @@ header a {
 
     .news-content {
         padding: 1rem 1rem 1rem 0;
+    }
+
+    /* ACCESS */
+    #access h2 {
+        margin-bottom: 4rem;
+    }
+    .access-list {
+        margin-bottom: 3rem;
+    }
+    .access-text {
+        margin-left: 2rem;
     }
 
 
