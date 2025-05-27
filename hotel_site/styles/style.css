@@ -95,3 +95,175 @@ header a {
     overflow: hidden;
     transition: .5s;
 }
+
+.main-nav li {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.main-nav a {
+    display: block;
+}
+
+.main-nav .open-menu {
+    width: 100%;
+}
+
+/* HERO */
+#hero {
+    background-image: url("../images/hotel_site_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-date {
+    text-align: center;
+    border-top: 3px solid var(--grey);
+    border-bottom: 3px solid var(--grey);
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ABOUT */
+#about {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 4rem 1rem;
+}
+
+#about p {
+    margin-bottom: 2rem;
+}
+
+#about img {
+    display: block;
+    width: 40rem;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+}
+
+/* NEWS */
+#news {
+    background-image: url("../images/hotel_site_04.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.news-table {
+    width: 100%;
+}
+
+.news-table tr {
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+.news-table td {
+    display: block;
+    line-height: 1.5;
+}
+
+.news-date {
+    font-size: .875rem;
+    padding-top: 1rem;
+}
+
+.news-content {
+    padding-bottom: 1rem;
+}
+
+#access {
+    background-image: url("../images/hotel_site_03.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* FOOTER */
+.footer {
+    border-top: 1px solid rgba(255,255,255,0.5);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: .875rem;
+    color: var(--white);
+}
+
+.footer a {
+    text-decoration: underline;
+}
+
+
+
+/* DESKTOP SCREEN STYLES */
+@media (min-width: 600px) {
+
+
+
+
+
+    /* HEADER */
+    .btn-menu {
+        display: none;
+    }
+
+    .main-nav {
+        width: 100%;
+        position: static;
+        display: flex;
+    }
+
+    .main-nav li {
+        margin: 0 0 0 1.5rem;
+    }
+
+    /* HERO */
+    #hero h1{
+        font-size: 6.875rem;
+    }
+
+    .hero-date {
+        font-size: 3rem;
+    }
+
+    /* NEWS */
+    .news-table td {
+        display: table-cell;
+    }
+
+    .news-date {
+        padding: 1.125rem 0 1rem 1rem;
+    }
+
+    .news-content {
+        padding: 1rem 1rem 1rem 0;
+    }
+
+
+}
