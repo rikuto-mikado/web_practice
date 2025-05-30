@@ -65,3 +65,4 @@ function setHeroHeight() {
 window.addEventListener('resize', setHeroHeight);
 window.addEventListener('load', setHeroHeight);
 
+.
