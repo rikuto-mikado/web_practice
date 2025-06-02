@@ -1,3 +1,4 @@
+/* loading */
 const loadingAreaOrange = document.querySelector("#loading");
 const loadingAreaBule = document.querySelector("#loading-screen");
 const loadingText = document.querySelector("#loading p");
@@ -46,3 +47,4 @@ window.addEventListener("load", () => {
         }
     );
 });
+
