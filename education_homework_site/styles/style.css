@@ -333,3 +333,148 @@ footer a {
     text-decoration: underline;
     color: var(--white);
 }
+
+
+@media (max-width: 768px) {
+
+    #point,
+    #demonstration,
+    #reference {
+        min-height: 100vh;
+    }
+
+    /* HERO */
+    .hero-container,
+    .about-container,
+    .point-container,
+    .result-container {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.5rem 1rem;
+    }
+    
+    .hero-left,
+    .hero-right,
+    .about-left,
+    .about-right,
+    .point-left,
+    .point-right,
+    .result-left,
+    .result-right {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-right img,
+    .about-left img,
+    .point-left img,
+    .result-right img {
+        width: 55%;
+        max-width: 320px;
+        height: auto;
+        margin-inline: auto; 
+    }
+    
+    .hero-container h1 {
+        font-size: 3.5rem;
+    }
+
+    .about-right h2,
+    .point-left h2,
+    .point-right h2,
+    .demonstration-top h2,
+    .result-left h2,
+    .reference-top h2 {
+        font-size: 2rem;
+    }
+    
+    .about-right p,
+    .point-left p,
+    .point-right p,
+    .demonstration-center p,
+    .result-left p,
+    .reference-buttom p {
+        font-size: 1rem;
+        padding: 0 1rem 0 1rem;
+    }
+    
+    .wrapper {
+        padding: .5rem 1rem .5rem 1rem;
+    }
+    
+    .wrapper h2 {
+        font-size: 1rem;
+    }
+    
+    .wrapper p {
+        font-size: .8rem;
+    }
+
+    .demonstration-center {
+        flex-direction: column;
+        gap: .5rem;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .demonstration-top h2 {
+        margin-bottom: 1rem;
+    }
+
+
+    .demonstration-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .demonstration-group img {
+        width: 30%;
+        max-width: 330px;
+        height: auto;
+        margin-inline: auto;
+        margin-top: 1.5rem;
+    }
+    
+    .wrapper,
+    .demonstration-top {
+        margin-bottom: 0;
+    }
+
+    .point-right .wrapper {
+        width: 90%;
+        max-width: 480px;
+        margin: 0 auto 1.8rem;
+        box-sizing: border-box;
+    }
+
+    
+
+    .reference-buttom {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem
+    }
+
+    .reference-list li {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-right: 1rem;
+    }
+
+    .reference-pic img {
+        width: 50%;
+        max-width: 280px;
+        height: auto;
+        margin-inline: auto;
+    }
+
+}
