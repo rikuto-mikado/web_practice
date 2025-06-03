@@ -48,3 +48,34 @@ window.addEventListener("load", () => {
     );
 });
 
+
+/* SCROLLING */
+document.addEventListener('DOMContentLoaded', () => {
+
+  /** 交差コールバック */
+  const onIntersect = (entries) => {
+    entries.forEach(entry => {
+      const items = [...entry.target.querySelectorAll('.reveal-item')]
+        .sort((a, b) => a.dataset.order - b.dataset.order); // define numbers
+
+      if (entry.isIntersecting) { // when it is able to see
+        items.forEach((el, i) => {
+          el.style.transitionDelay = `${i * 0.5}s`;
+          el.classList.add('show');
+        });
+      } else { // when i go outside of the area
+        items.forEach(el => {
+          el.classList.remove('show');
+          el.style.transitionDelay = '0s';
+        });
+      }
+    });
+  };
+
+  /** Observer 作成 (root はビューポート) */
+  const io = new IntersectionObserver(onIntersect, {
+    threshold: 0.3 // it will be happend when it is seem around 30%
+  });
+
+  document.querySelectorAll('.reveal-section').forEach(sec => io.observe(sec));
+});

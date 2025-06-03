@@ -71,6 +71,21 @@ html {
     font-family: var(--primary-font);
 }
 
+/* SCROLLING */
+.reveal-item{
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity .6s ease, 
+    transform .6s ease;
+}
+
+.reveal-item.show{
+  opacity: 1;
+  transform: none;
+}
+
+
 /* HERO */
 #hero {
     background-color: var(--light-blue);
