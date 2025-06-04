@@ -7,6 +7,7 @@
         <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css'>
         <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
         <link rel = 'stylesheet' href = 'styles/style.css'>
+        <script src = 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js'></script>
         <script src = 'components/script.js' defer></script>
     </head>
     <body>
@@ -92,27 +93,30 @@
             </div>
         </section>
 
-        <section id = 'result'>
+        <section id = 'result' class="reveal-section">
             <div class = 'result-container'>
                 <div class = 'result-left'>
-                    <h2>Results</h2>
-                    <p>
+                    <h2 class = 'reveal-item' data-order="1">Results</h2>
+                    <p class = 'reveal-item' data-order="2">
                         Visualize complicated and dense information with graphs and charts from the object panel.<br>
                         These are visual aids that add more context to the topic you are discussing.
                     </p>
                 </div>
                 <div class = 'result-right'>
-                    <img src = 'images/graph03.png' alt = ''>
+                    <canvas id="myChart"
+                    class="reveal-item"
+                    width="600"  height="400"
+                    data-order="3"></canvas>
                 </div>
             </div>
         </section>
 
-        <section id = 'reference'>
+        <section id = 'reference' class="reveal-section">
             <div class = 'reference-container'>
                 <div class = 'reference-top'>
-                    <h2>References</h2>
+                    <h2 class = 'reveal-item' data-order="1">References</h2>
                 </div>
-                <div class = 'reference-buttom'>
+                <div class = 'reference-buttom reveal-item' data-order="2">
                     <div class = 'reference-list'>
                         <ul>
                             <li>Add your sources and references here</li>
