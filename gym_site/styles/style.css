@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+:root {
+    --light-blue: #4db1ec;
+    --blue: #1665cc;
+    --purple: #b473bf;
+    --pink: #ffb2c1;
+    --orange: #ff9f67;
+    --yellow: #ffd673;
+    --light-green: #a2e29b;
+    --green: #00a2af;
+    --grey: #333;
+    --white: #fff;
+}
+
 html {
     font-size: 100%;
 }
