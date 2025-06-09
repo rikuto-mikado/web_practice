@@ -6,6 +6,7 @@
     --dark-teal: #2f4b4c;
     --medium-teal: #507476;
     --white: #fff;
+    --grey: #93939393;
     --black: #000;
 }
 
@@ -152,6 +153,7 @@ html {
 
 /* FORM */
 #form {
+    position: relative;
     height: 100vh;
     background-image: url(../images/form.png);
     background-size: cover;
@@ -160,28 +162,62 @@ html {
     align-items: center;
     text-align: center;
     justify-content: center;
+    z-index: 9999;
+}
+
+#form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 51, 34, 0.5);
+    
+    z-index: 1;
 }
 
 .form-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem;
+}
+
+.form-container h1 {
+    font-size: 4rem;
+    color: var(--white);
+    z-index: 9998;
 }
 
 .form-container button {
     padding: 0.75rem 1.5rem;
-    background-color: var(--accent, #007BFF);
+    background-color: transparent; 
     color: white;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
     border-radius: 6px;
-    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+}
+
+.form-container .VistUsNow {
+    font-weight: bold; 
+}
+
+.form-container button:hover {
+    background-color: var(--grey);
 }
 
 /* CONTACT */
 #contact {
+    position: relative;
     height: 100vh;
     background-image: url("../images/contact.png");
     display: flex;
@@ -191,4 +227,64 @@ html {
 
 }
 
+#contact h2 {
+    position: absolute;
+    font-size: 3rem;
+    color: var(--white);
+    top: 2rem;
+    left: 2rem;
+}
 
+.contact-details {
+    display: flex;
+
+}
+
+.contact-details th {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.contact-details td {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.contact-details table {
+  border-collapse: separate;
+  border-spacing: 2rem 2rem;
+}
+
+
+@media(max-width: 768px) {
+
+    /* HERO */
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-start;
+    }
+
+    /* ABOUT */
+    #about {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+        height: auto;
+        text-align: center;
+    }
+
+
+    /* SERVICES */
+
+
+
+    /* FORM */
+
+
+
+    /* CONTACT */
+
+
+}
