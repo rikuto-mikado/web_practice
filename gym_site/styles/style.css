@@ -104,15 +104,51 @@ html {
 
 
 /* SERVICES */
+
 #services {
     height: 100vh;
     background-color: var(--teal);
-    display: flex;
-    align-items: center;
     text-align: center;
     justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    box-sizing: border-box;
+}
+
+.services-containers {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.services-groups {
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.services-groups h3 {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.services-groups p {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.services-groups img {
+    width: 100%;
+    height: auto;
 
 }
+
+#services h2{
+    font-size: 3rem;
+    color: var(--white);
+}
+
 
 /* FORM */
 #form {
@@ -124,6 +160,24 @@ html {
     align-items: center;
     text-align: center;
     justify-content: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent, #007BFF);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* CONTACT */
