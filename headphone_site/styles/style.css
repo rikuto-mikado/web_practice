@@ -1,1 +1,124 @@
 @charset "UTF-8";
+
+:root {
+    --white: #fff;
+    --black: #000;
+}
+/* GENERAL */
+
+
+
+/* HERO */
+#hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 3rem;
+    background: linear-gradient(90deg, #4db1ec, #a2e29b);
+    padding: 3rem;
+}
+
+.site_name {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.heroLeft h1 {
+    font-size: 4rem;
+    color: var(--black);
+}
+
+.heroRight img {
+    max-height: 25rem;
+}
+
+
+/* ABOUT */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(90deg, #4db1ec, #a2e29b); 
+    padding: 3rem;
+}
+
+.aboutLeft h2 {
+    font-size: 3rem;
+}
+
+.aboutLeft p {
+    font-size: 1rem;
+    padding-right: 1rem;
+}
+
+.aboutRight img {
+    max-height: 30rem;
+    border-radius: 25% 10%;
+}
+
+
+/* CATEGORY */
+#category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(90deg, #4db1ec, #a2e29b);
+    padding: 3rem;
+}
+
+.categoryContainer {
+    margin-bottom: 1rem;
+}
+
+.categoryContainer h2 {
+    font-size: 3rem;
+}
+
+.categoryImages {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
+    gap: 3rem;
+}
+
+.categoryImages img {
+    max-height: 30rem;
+    border-radius: 5% 15%;
+}
+
+.btn {
+    background: linear-gradient(125deg, #b3e5fc, #b2ebf2);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: linear-gradient(125deg, #81d4fa, #80deea);
+}
+
+/* HELP */
+#help {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(90deg, #4db1ec, #a2e29b); 
+}
+
+.helpLocation p {
+    margin: 0;
+}
+
+/* CONTACT */
+#contact {
+    height: 100vh;
+    background: linear-gradient(90deg, #4db1ec, #a2e29b); 
+}
