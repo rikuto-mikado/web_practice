@@ -222,6 +222,7 @@
 
     /* HERO */
     #hero {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -231,7 +232,13 @@
     }
 
     .heroLeft h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
+    }
+
+    .site_name {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
     }
 
     .heroRight img {
@@ -245,8 +252,23 @@
         flex-direction: column;
     }
 
+    .aboutLeft {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align:center;
+        margin-bottom: 1.5rem;
+    }
+
     .aboutLeft h2 {
         font-size: 2.5rem;
+    }
+
+    .aboutRight {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .aboutRight img {
@@ -261,6 +283,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: auto;
     }
 
     .categoryContainer h2 {
@@ -314,14 +337,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 0;
+        gap: 1.5rem;
     }
 
     .contactLeft h2 {
         font-size: 2.5rem;
+        margin-bottom: 3rem;
     }
 
     .contactColumn h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .contactEmail {
