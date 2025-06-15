@@ -88,7 +88,7 @@
 }
 
 .categoryImages img {
-    max-height: 30rem;
+    max-height: 40vh;
     border-radius: 5% 15%;
 }
 
@@ -235,6 +235,14 @@
         font-size: 3rem;
     }
 
+    .heroButton {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
     .site_name {
         position: absolute;
         top: 2rem;
@@ -298,6 +306,11 @@
     }
 
     .categoryImages img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+
         max-height: 25rem;
         border-radius: 5% 15%;
     }
