@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* COLORS */
+:root {
+    --light-pink: #fed9c2;
+    --light-orange: #ed9876;
+    --dark-orange: #fa7e4a;
+    --dark-green: #19676b;
+    --black: #000;
+    --white: #fff;
+    --grey: #f0ebe6;
+}
+
+/* GENERAL */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Gill Sans", sans-serif;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--black);
+    z-index: 10;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+/* HERO */
+#hero {
+    height: 100vh;
+    background-color: var(--light-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_name img {
+    width: 200px;
+    height: auto;
+}
+
+
+
+/* LETTER */
+#letter {
+    height: 100vh;
+    background-color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* POINT */
+#point {
+    height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* PROCESS */
+#process {
+    height: 100vh;
+    background-color: var(--dark-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ATTENTION */
+#attention {
+    height: 100vh;
+    background-color: var(--dark-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ACHIEVEMENTS */
+#achievements {
+    height: 100vh;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* PROFIT */
+#profit {
+    height: 100vh;
+}
+
+
+/* WORLD */
+#world {
+    height: 100vh;
+}
+
+
+/* HIGHTLIGHTS */
+#highlights {
+    height: 100vh;
+}
+
+
+/* STRATEGIES */
+#strategies {
+    height: 100vh;
+}
+
+
+/* ABOUT */
+#about {
+    height: 100vh;
+}
+
+
+/* GUIDELINES */
+#guidelines {
+    height: 100vh;
+}
+
+
+/* DETAILS */
+#details {
+    height: 100vh;
+}
+
+
+/* CONTACT */
+#contact {
+    height: 100vh;
+    background-color: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* FOOTER */
+
+
