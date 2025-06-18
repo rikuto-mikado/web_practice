@@ -1,94 +1,89 @@
-@charset "UTF-8";
-
 /* COLORS */
 :root {
-    --light-pink: #fed9c2;
-    --light-orange: #ed9876;
-    --dark-orange: #fa7e4a;
-    --dark-green: #19676b;
-    --black: #000;
-    --white: #fff;
-    --grey: #f0ebe6;
+  --light-pink: #fed9c2;
+  --light-orange: #ed9876;
+  --dark-orange: #fa7e4a;
+  --dark-green: #19676b;
+  --black: #000;
+  --white: #fff;
+  --grey: #f0ebe6;
 }
 
 /* GENERAL */
 html {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 body {
-    font-family: "Gill Sans", sans-serif;
+  font-family: "Gill Sans", sans-serif;
 }
 
 /* HEADER */
 header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: var(--black);
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: var(--black);
+  z-index: 10;
 }
-
 header a {
-    text-decoration: none;
-    color: var(--white);
-    font-size: 1.5rem;
-    padding: 1rem;
-    display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 1rem;
+  display: inline-block;
 }
-
 header a:hover {
-    background-color: var(--white);
-    color: var(--black);
+  background-color: var(--white);
+  color: var(--black);
 }
 
 /* HERO */
 #hero {
-    height: 100vh;
-    background-color: var(--light-pink);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem;
+  height: 100vh;
+  background-color: var(--light-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
 }
 
 .hero_name {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
-
 .hero_name img {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .heroContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
 }
 
 .heroLeft {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .heroText h1 {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 .heroImage img {
-    width: 15rem;
+  width: 15rem;
 }
 
 .heroRight img {
-    width: 25rem;
+  width: 25rem;
 }
 
 .heroButton {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .btn {
@@ -107,17 +102,14 @@ header a:hover {
   color: black;
   background-color: white;
 }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-
 .btn::after {
   content: "";
   display: inline-block;
@@ -129,129 +121,105 @@ header a:hover {
   left: 0;
   z-index: -1;
   transition: all 0.4s;
-}
-
-.btn::after {
   background-color: #fff;
 }
-
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
 
 .btn_green {
-    background: var(--dark-green);
-    color: var(--white);
+  background: var(--dark-green);
+  color: var(--white);
 }
 
 .btn_orange {
-    background: var(--dark-orange);
-    color: var(--white);
+  background: var(--dark-orange);
+  color: var(--white);
 }
 
 /* LETTER */
 #letter {
-    height: 100vh;
-    background-color: var(--dark-green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  background-color: var(--dark-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
 }
-
+#letter .letterContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5rem;
+}
+#letter .letterContainer .letterLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#letter .letterContainer .letterLeft .letterImage {
+  margin-bottom: 2rem;
+}
+#letter .letterContainer .letterLeft .letterImage img {
+  height: 250px;
+  width: 300px;
+}
+#letter .letterContainer .letterLeft .letterTextTop {
+  margin-bottom: 2rem;
+}
+#letter .letterContainer .letterLeft .letterTextTop p.letterTextSize {
+  font-size: 1rem;
+  color: var(--light-pink);
+  max-width: 350px;
+}
+#letter .letterContainer .letterLeft .letterTextMiddle {
+  margin: 0;
+}
+#letter .letterContainer .letterLeft .letterTextMiddle p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--dark-orange);
+}
+#letter .letterContainer .letterRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#letter .letterContainer .letterRight .letterTextDetails {
+  max-width: 300px;
+}
 
 /* POINT */
 #point {
-    height: 100vh;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 /* PROCESS */
 #process {
-    height: 100vh;
-    background-color: var(--dark-orange);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  background-color: var(--dark-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 /* ATTENTION */
 #attention {
-    height: 100vh;
-    background-color: var(--dark-green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  background-color: var(--dark-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-
-/* ACHIEVEMENTS */
-#achievements {
-    height: 100vh;
-    background-color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* PROFIT */
-#profit {
-    height: 100vh;
-}
-
-
-/* WORLD */
-#world {
-    height: 100vh;
-}
-
-
-/* HIGHTLIGHTS */
-#highlights {
-    height: 100vh;
-}
-
-
-/* STRATEGIES */
-#strategies {
-    height: 100vh;
-}
-
-
-/* ABOUT */
-#about {
-    height: 100vh;
-}
-
-
-/* GUIDELINES */
-#guidelines {
-    height: 100vh;
-}
-
-
-/* DETAILS */
-#details {
-    height: 100vh;
-}
-
-
-/* CONTACT */
-#contact {
-    height: 100vh;
-    background-color: var(--grey);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 /* FOOTER */
 
-
+/*# sourceMappingURL=style.css.map */
