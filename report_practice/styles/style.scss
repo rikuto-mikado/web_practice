@@ -193,8 +193,14 @@ header {
             align-items: center;
             justify-content: center;
             text-align: center;
-            .letterTextDetails {
-                max-width: 300px;
+            .letterTextBottom {
+                & h2 {
+                    font-size: 2rem;
+                    color: var(--white);
+                }
+                .letterTextDetails {
+                    max-width: 300px;
+                }
             }
         }
     }
@@ -208,18 +214,90 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    .pointContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 1rem 2rem;
+        .pointLeft {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            width: 50%;
+            .pointTitle {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                & h2 {
+                    font-size: 2rem;
+                    color: var(--dark-green);
+                }
+            }
+            .pointLeftDetails {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                & h3 {
+                    font-size: 1.4rem;
+                    color: var(--dark-orange);
+                    margin: 0;
+                }
+                & p {
+                    font-size: 1rem;
+                    color: var(--black);
+                }
+            }
+        }
+        .pointRight {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            width: 50%;
+            .pointRightContainer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                .pointRightElementTop {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                    & h4 {
+                        font-size: 1.2rem;
+                        margin: 0;
+                    }
+                }
+                .pointRightElementBottom {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                    & h3 {
+                        font-size: 1.4rem;
+                        color: var(--dark-orange);
+                        margin: 0;
+                    }
+                    & p {
+                        font-size: 1rem;
+                        color: var(--black);
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
 }
-
-
-/* PROCESS */
-#process {
-    height: 100vh;
-    background-color: var(--dark-orange);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 /* ATTENTION */
 #attention {

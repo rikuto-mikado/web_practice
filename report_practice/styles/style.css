@@ -189,7 +189,11 @@ header a:hover {
   justify-content: center;
   text-align: center;
 }
-#letter .letterContainer .letterRight .letterTextDetails {
+#letter .letterContainer .letterRight .letterTextBottom h2 {
+  font-size: 2rem;
+  color: var(--white);
+}
+#letter .letterContainer .letterRight .letterTextBottom .letterTextDetails {
   max-width: 300px;
 }
 
@@ -201,14 +205,88 @@ header a:hover {
   align-items: center;
   justify-content: center;
 }
-
-/* PROCESS */
-#process {
-  height: 100vh;
-  background-color: var(--dark-orange);
+#point .pointContainer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+#point .pointContainer .pointLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 50%;
+}
+#point .pointContainer .pointLeft .pointTitle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+#point .pointContainer .pointLeft .pointTitle h2 {
+  font-size: 2rem;
+  color: var(--dark-green);
+}
+#point .pointContainer .pointLeft .pointLeftDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#point .pointContainer .pointLeft .pointLeftDetails h3 {
+  font-size: 1.4rem;
+  color: var(--dark-orange);
+  margin: 0;
+}
+#point .pointContainer .pointLeft .pointLeftDetails p {
+  font-size: 1rem;
+  color: var(--black);
+}
+#point .pointContainer .pointRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 50%;
+}
+#point .pointContainer .pointRight .pointRightContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+#point .pointContainer .pointRight .pointRightContainer .pointRightElementTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+#point .pointContainer .pointRight .pointRightContainer .pointRightElementTop h4 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+#point .pointContainer .pointRight .pointRightContainer .pointRightElementBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+#point .pointContainer .pointRight .pointRightContainer .pointRightElementBottom h3 {
+  font-size: 1.4rem;
+  color: var(--dark-orange);
+  margin: 0;
+}
+#point .pointContainer .pointRight .pointRightContainer .pointRightElementBottom p {
+  font-size: 1rem;
+  color: var(--black);
+  margin: 0;
 }
 
 /* ATTENTION */
