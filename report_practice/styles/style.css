@@ -152,6 +152,7 @@ header a:hover {
   flex-direction: row;
   align-items: center;
   gap: 5rem;
+  padding: 3rem;
 }
 #letter .letterContainer .letterLeft {
   display: flex;
@@ -197,6 +198,18 @@ header a:hover {
   max-width: 300px;
 }
 
+/* LETTER ANIMATION */
+.zoom-on-view {
+  transition: transform 0.5s ease;
+  transform: scale(1);
+  opacity: 0;
+}
+
+.zoom-on-view.visible {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
 /* POINT */
 #point {
   height: 100vh;
@@ -211,7 +224,7 @@ header a:hover {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 1rem 2rem;
+  padding: 3rem;
 }
 #point .pointContainer .pointLeft {
   display: flex;
@@ -297,7 +310,40 @@ header a:hover {
   align-items: center;
   justify-content: center;
 }
-
-/* FOOTER */
+#attention .attentionContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3rem;
+}
+#attention .attentionContainer .attentionLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+}
+#attention .attentionContainer .attentionLeft h3 {
+  font-size: 1.4rem;
+  color: var(--light-orange);
+  margin: 0;
+}
+#attention .attentionContainer .attentionLeft p {
+  font-size: 1rem;
+  color: var(--white);
+  margin: 0;
+}
+#attention .attentionContainer .attentionRight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+#attention .attentionContainer .attentionRight img {
+  max-width: 20rem;
+}
 
 /*# sourceMappingURL=style.css.map */

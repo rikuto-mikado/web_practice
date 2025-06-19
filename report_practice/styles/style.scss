@@ -158,6 +158,7 @@ header {
         flex-direction: row;
         align-items: center;
         gap: 5rem;
+        padding: 3rem;
         .letterLeft {
             display: flex;
             flex-direction: column;
@@ -206,6 +207,18 @@ header {
     }
 }
 
+/* LETTER ANIMATION */
+.zoom-on-view {
+  transition: transform 0.5s ease;
+  transform: scale(1);
+  opacity: 0;
+}
+
+.zoom-on-view.visible {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
 
 /* POINT */
 #point {
@@ -220,7 +233,7 @@ header {
         align-items: center;
         justify-content: center;
         gap: 2rem;
-        padding: 1rem 2rem;
+        padding: 3rem;
         .pointLeft {
             display: flex;
             flex-direction: column;
@@ -306,7 +319,43 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    .attentionContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 3rem;
+        .attentionLeft {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            width: 50%;
+            & h3 {
+                font-size: 1.4rem;
+                color: var(--light-orange);
+                margin: 0;
+            }
+            & p {
+                font-size: 1rem;
+                color: var(--white);
+                margin: 0;
+            }
+        }
+        .attentionRight {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            & img {
+                max-width: 20rem;
+            }
+        }
+    }
 }
 
+@media(max-width: 768px) {
 
-/* FOOTER */
+}
