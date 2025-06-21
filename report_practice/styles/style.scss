@@ -156,6 +156,7 @@ header {
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
+            width: 50%;
             .letterImage{
                 margin-bottom: 2rem;
                 & img {
@@ -186,6 +187,7 @@ header {
             align-items: center;
             justify-content: center;
             text-align: center;
+            width: 50%;
             .letterTextBottom {
                 & h2 {
                     font-size: 2rem;
@@ -342,7 +344,7 @@ header {
             justify-content: center;
             width: 50%;
             & img {
-                max-width: 20rem;
+                max-width: 25rem;
             }
         }
     }
@@ -508,6 +510,94 @@ header {
 
 
     /* POINT */
+    #point {
+        height: auto;
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .pointContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+            .pointLeft {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1.5rem;
+                .pointTitle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    & h2 {
+                        font-size: 1.5rem;
+                        color: var(--dark-green);
+                    }
+                }
+                .pointLeftDetails {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    & h3 {
+                        font-size: 1.3rem;
+                        color: var(--dark-orange);
+                        margin: 0;
+                    }
+                    & p {
+                        font-size: 1rem;
+                        color: var(--black);
+                    }
+                }
+            }
+            .pointRight {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1.5rem;
+                .pointRightContainer {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                    .pointRightElementTop {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1.5rem;
+                        & h4 {
+                            font-size: 1.2rem;
+                            margin: 0;
+                        }
+                    }
+                    .pointRightElementBottom {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1.5rem;
+                        & h3 {
+                            font-size: 1.4rem;
+                            color: var(--dark-orange);
+                            margin: 0;
+                        }
+                        & p {
+                            font-size: 1rem;
+                            color: var(--black);
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 
     /* ATTENTION */
