@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 /* scss */
-@import 'header';
-@import 'footer';
-@import 'home';
+@use 'header';
+@use 'footer';
+@use 'home';
+
+/* general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
