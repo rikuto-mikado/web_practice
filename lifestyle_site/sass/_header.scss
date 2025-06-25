@@ -45,12 +45,6 @@
     }
   }
 
-  > ul > li.active > a {
-    color: #3586ff;
-    background-color: transparent;
-    transition: all 0.7s;
-  }
-
   a:not(:only-child)::after {
     content: "\f105";
     position: absolute;

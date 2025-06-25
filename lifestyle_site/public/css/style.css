@@ -41,11 +41,6 @@
 #navbarSupportedContent ul li a i {
   margin-right: 10px;
 }
-#navbarSupportedContent > ul > li.active > a {
-  color: #3586ff;
-  background-color: transparent;
-  transition: all 0.7s;
-}
 #navbarSupportedContent a:not(:only-child)::after {
   content: "\f105";
   position: absolute;
@@ -230,12 +225,41 @@
   }
 }
 
+/* home */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: flex-start;
+  background: url("/images/chair.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#hero .title {
+  display: flex;
+}
+#hero .title h1 {
+  font-size: 8rem;
+  color: var(--dark-white);
+}
+
 /* general */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+/* color */
+:root {
+  --light-white: #fff;
+  --dark-white: #f0f0f0;
+  --light-black: #2d2d2d;
+  --dark-black: #000;
+  --grey: #ccc;
 }
 
 /*# sourceMappingURL=style.css.map */

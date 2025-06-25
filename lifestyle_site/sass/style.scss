@@ -4,6 +4,8 @@
 @use 'header';
 @use 'footer';
 @use 'home';
+@use 'about';
+@use 'contact';
 
 /* general */
 * {
@@ -11,4 +13,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+/* color */
+:root {
+  --light-white: #fff;
+  --dark-white: #f0f0f0;
+  --light-black: #2d2d2d;
+  --dark-black: #000;
+  --grey: #ccc;
 }

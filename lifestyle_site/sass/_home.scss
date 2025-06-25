@@ -1,0 +1,20 @@
+/* home */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: flex-start;
+
+    background: url("/images/chair.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    .title {
+        display: flex;
+        & h1 {
+            font-size: 8rem;
+            color: var(--dark-white);
+        }
+    }
+}
