@@ -232,7 +232,7 @@
   align-items: center;
   justify-content: center;
   text-align: flex-start;
-  background: url("/images/chair.png");
+  background: url("/images/hotel.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -241,8 +241,85 @@
   display: flex;
 }
 #hero .title h1 {
-  font-size: 8rem;
-  color: var(--dark-white);
+  font-size: 10rem;
+  color: var(--light-white);
+}
+
+#about {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+#about .aboutContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#about .aboutContainer .aboutContent01 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+#about .aboutContainer .aboutContent02 {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+#about .aboutContainer .aboutContent02 p {
+  width: 50%;
+}
+#about .aboutContainer .aboutContent02 img {
+  width: 50%;
+}
+
+#element {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--orange);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#element .elementContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: center;
+}
+#element .elementContainer .elementBox {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  background-color: var(--dark-white);
+  padding: 4rem 2rem;
+}
+#element .elementContainer .elementBox h2 {
+  position: relative;
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+#element .elementContainer .elementBox h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  transform: translateY(8px);
 }
 
 /* general */
@@ -260,6 +337,7 @@
   --light-black: #2d2d2d;
   --dark-black: #000;
   --grey: #ccc;
+  --orange: #ed8762;
 }
 
 /*# sourceMappingURL=style.css.map */
