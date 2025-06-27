@@ -17,7 +17,7 @@ app.set('layout', 'layout');
 
 /* routing */
 app.get('/', (req, res) => {
-  res.render('pages/home', { title: 'ホーム' });
+  res.render('pages/home', { title: 'Home' });
 });
 
 app.get('/about', (req, res) => {

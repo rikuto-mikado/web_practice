@@ -1,4 +1,32 @@
 /* scss */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* header */
 .navbar-logo {
   padding: 15px;
@@ -298,6 +326,7 @@
 #element .elementContainer .elementBox {
   display: flex;
   flex-direction: column;
+  border-radius: 30px;
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
@@ -320,6 +349,53 @@
   height: 2px;
   background-color: #ccc;
   transform: translateY(8px);
+}
+
+#contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem 0 1rem;
+  text-align: center;
+}
+#contact .contact-title {
+  font-size: 2.5rem;
+}
+#contact .contact-description {
+  font-size: 1rem;
+}
+#contact .contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+#contact .contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+#contact .contact-form .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+#contact .contact-form .form-group input,
+#contact .contact-form .form-group textarea {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+#contact .contact-form .form-group textarea {
+  resize: vertical;
+}
+#contact .contact-form .btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
 }
 
 /* general */
