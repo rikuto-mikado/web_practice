@@ -296,6 +296,7 @@
   gap: 1.5rem;
   align-items: flex-start;
   justify-content: center;
+  padding-top: 3rem;
 }
 #about .aboutContainer .aboutContent02 {
   display: flex;
@@ -314,22 +315,22 @@
   #about .aboutContainer .aboutContent01 {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.5rem;
     align-items: flex-start;
     justify-content: center;
   }
   #about .aboutContainer .aboutContent02 {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 0.5rem;
     align-items: center;
     justify-content: center;
   }
   #about .aboutContainer .aboutContent02 p {
-    width: 50%;
+    width: 100%;
   }
   #about .aboutContainer .aboutContent02 img {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -381,9 +382,10 @@
   #element .elementContainer {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: stretch;
     justify-content: center;
+    padding: 2rem 1.5rem;
   }
   #element .elementContainer .elementBox {
     display: flex;
@@ -392,14 +394,14 @@
     gap: 1.5rem;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 100%;
     height: 100%;
     background-color: var(--dark-white);
-    padding: 4rem 2rem;
+    padding: 2rem 1rem;
   }
   #element .elementContainer .elementBox h2 {
     position: relative;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     padding-bottom: 0.5rem;
   }
   #element .elementContainer .elementBox h2::after {
