@@ -272,6 +272,11 @@
   font-size: 10rem;
   color: var(--light-white);
 }
+@media (max-width: 768px) {
+  #hero .title h1 {
+    font-size: 3rem;
+  }
+}
 
 #about {
   height: 100vh;
@@ -304,6 +309,28 @@
 }
 #about .aboutContainer .aboutContent02 img {
   width: 50%;
+}
+@media (max-width: 768px) {
+  #about .aboutContainer .aboutContent01 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  #about .aboutContainer .aboutContent02 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+  #about .aboutContainer .aboutContent02 p {
+    width: 50%;
+  }
+  #about .aboutContainer .aboutContent02 img {
+    width: 50%;
+  }
 }
 
 #element {
@@ -349,6 +376,42 @@
   height: 2px;
   background-color: #ccc;
   transform: translateY(8px);
+}
+@media (max-width: 768px) {
+  #element .elementContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+    justify-content: center;
+  }
+  #element .elementContainer .elementBox {
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 100%;
+    background-color: var(--dark-white);
+    padding: 4rem 2rem;
+  }
+  #element .elementContainer .elementBox h2 {
+    position: relative;
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
+  #element .elementContainer .elementBox h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    transform: translateY(8px);
+  }
 }
 
 #contact {
