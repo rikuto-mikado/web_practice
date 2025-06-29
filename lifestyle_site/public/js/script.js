@@ -1,9 +1,9 @@
 /* contact-form */
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('a[href^="/#"]').forEach(link => {
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      const id = this.getAttribute("href").replace("/#", "");
+      const id = this.getAttribute("href").substring(1); // "#"を除く
       const target = document.getElementById(id);
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 /* loading */
 window.addEventListener("load", () => {

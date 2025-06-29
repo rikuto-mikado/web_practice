@@ -360,6 +360,7 @@
   justify-content: center;
   width: 30%;
   height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   background-color: var(--dark-white);
   padding: 4rem 2rem;
 }
@@ -447,7 +448,6 @@
 #contact .contact-form .form-group input,
 #contact .contact-form .form-group textarea {
   width: 100%;
-  padding: 1rem 1.5rem;
   max-width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
