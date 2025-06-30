@@ -1,4 +1,10 @@
+@charset "UTF-8";
+
 /* scss */
+@use 'loading';
+@use 'header';
+@use 'footer';
+
 /* general */
 * {
   margin: 0;
@@ -6,5 +12,3 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-/*# sourceMappingURL=style.css.map */
