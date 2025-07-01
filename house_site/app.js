@@ -30,10 +30,17 @@ app.set('views', path.join(__dirname, 'views'));
 /* --------------------------
    Page Routing
 -------------------------- */
+app.get('/', (req, res) => {
+   res.render('pages/home', {title: 'Home'});
+});
 
+app.get('/about', (req, res) => {
+  res.render('pages/about', { title: 'About Us' });
+});
 
-
-
+app.get('/about', (req, res) => {
+  res.render('pages/contact', { title: 'Contact Us' });
+});
 
 /* --------------------------
    Contact Form (POST handler)

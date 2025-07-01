@@ -5,6 +5,18 @@
 @use 'header';
 @use 'footer';
 
+/* color */
+:root {
+  --dark-brown: #c49963;
+  --light-brown: #faefe0;
+
+  --dark-black: #0A0A0A;
+  --light-black: #2E2E2E;
+
+  --dark-white: #E0E0E0;
+  --light-white: #FFFFFF;
+}
+
 /* general */
 * {
   margin: 0;
