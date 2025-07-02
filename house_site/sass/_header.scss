@@ -1,15 +1,43 @@
 /* header */
 .site-header {
-    background-color: var(--dark-white);
-    padding: 1rem 0;
-    color: var(--light-black);
+  background-color: var(--dark-white);
+  padding: 1rem 0;
 
-    .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a {
+    color: var(--light-black);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+    &:hover {
+      color: var(--dark-black);
     }
+  }
+
+  .nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+
+      li a {
+        color: var(--light-black);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--dark-black);
+        }
+      }
+    }
+  }
 }
+
