@@ -162,6 +162,16 @@
   border-bottom: 3.5px solid #333;
 }
 
+.contactContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
 /* color */
 :root {
   --dark-brown: #c49963;
