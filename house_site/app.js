@@ -38,7 +38,7 @@ app.get('/about', (req, res) => {
   res.render('pages/about', { title: 'About Us' });
 });
 
-app.get('/about', (req, res) => {
+app.get('/contact', (req, res) => {
   res.render('pages/contact', { title: 'Contact Us' });
 });
 
