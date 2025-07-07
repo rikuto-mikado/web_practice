@@ -21,6 +21,16 @@
 .site-header .logo a:hover {
   color: var(--dark-black);
 }
+@media (max-width: 786px) {
+  .site-header .logo a {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .site-header .nav {
+    display: none;
+  }
+}
 .site-header .nav ul {
   list-style: none;
   display: flex;
@@ -32,6 +42,129 @@
 }
 .site-header .nav ul li a:hover {
   color: var(--dark-black);
+}
+
+.hamburger-overlay {
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  z-index: 1000;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.hamburger-overlay__line {
+  position: absolute;
+  left: 11px;
+  width: 26px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.6s;
+}
+.hamburger-overlay__line:nth-of-type(1) {
+  top: 14px;
+}
+.hamburger-overlay__line:nth-of-type(2) {
+  top: 23px;
+}
+.hamburger-overlay__line:nth-of-type(3) {
+  top: 32px;
+}
+.hamburger-overlay.active .hamburger-overlay__line {
+  background-color: #fff;
+}
+.hamburger-overlay.active .hamburger-overlay__line:nth-of-type(1) {
+  transform: translateY(9px) rotate(-45deg);
+}
+.hamburger-overlay.active .hamburger-overlay__line:nth-of-type(2) {
+  opacity: 0;
+}
+.hamburger-overlay.active .hamburger-overlay__line:nth-of-type(3) {
+  transform: translateY(-9px) rotate(45deg);
+}
+
+.hamburger-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger-overlay {
+    display: block;
+  }
+}
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.6s;
+  z-index: 900;
+}
+.nav-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+.nav-overlay.active .nav-overlay__item {
+  opacity: 1;
+  transform: translateY(0);
+}
+.nav-overlay.active .nav-overlay__item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.nav-overlay.active .nav-overlay__item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.nav-overlay.active .nav-overlay__item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.nav-overlay.active .nav-overlay__item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.nav-overlay__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+.nav-overlay__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-overlay__item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s;
+}
+.nav-overlay__link {
+  display: inline-block;
+  padding: 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-overlay__link:hover {
+  color: #4a90e2;
+}
+@media (max-width: 768px) {
+  .nav-overlay .nav {
+    display: none;
+  }
+  .nav-overlay .hamburger-overlay {
+    display: block;
+  }
+  .nav-overlay .nav-overlay {
+    display: block;
+  }
 }
 
 /* footer */
@@ -66,7 +199,7 @@
 .site-footer .footer-sections .footer-box {
   flex: 1;
   min-width: 200px;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   padding: 1rem;
 }
 .site-footer .footer-sections .footer-box h4 {
@@ -110,6 +243,17 @@
   font-size: 3rem;
   max-width: 50%;
 }
+@media (max-width: 768px) {
+  .homeContainer h1 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .homeContainer {
+    text-align: flex-start;
+    flex-direction: column;
+  }
+}
 
 .aboutContainer {
   width: 100%;
@@ -121,6 +265,13 @@
   gap: 0.5rem;
   background: #fceabb;
 }
+@media (max-width: 768px) {
+  .aboutContainer {
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+  }
+}
 .aboutContainer .aboutContainerBox {
   display: flex;
   flex: 1;
@@ -131,9 +282,22 @@
   max-width: 50%;
   gap: 1.5rem;
 }
+@media (max-width: 768px) {
+  .aboutContainer .aboutContainerBox {
+    max-width: 100%;
+    padding: 2rem;
+    margin: 0;
+    text-align: left;
+  }
+}
 .aboutContainer .aboutContainerBox img {
   max-height: 750px;
   border-radius: 80px;
+}
+@media (max-width: 768px) {
+  .aboutContainer .aboutContainerBox img {
+    max-height: 400px;
+  }
 }
 .aboutContainer .aboutContainerBox h2 {
   font-size: 3rem;
@@ -143,10 +307,21 @@
   font-size: 2.5rem;
   color: var(--light-black);
 }
+@media (max-width: 768px) {
+  .aboutContainer .aboutContainerBox h3 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
 .aboutContainer .aboutContainerBox h4 {
   font-size: 1.3rem;
   max-width: 50%;
   color: var(--dark-black);
+}
+@media (max-width: 768px) {
+  .aboutContainer .aboutContainerBox h4 {
+    font-size: 1rem;
+  }
 }
 .aboutContainer .aboutContainerBox p {
   font-size: 1rem;
@@ -170,6 +345,64 @@
   justify-content: center;
   flex-direction: row;
   gap: 0.5rem;
+  background: #fceabb;
+}
+.contactContainer .contactContainerBox {
+  max-width: 700px;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+.contactContainer .contactContainerBox h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--dark-black);
+}
+.contactContainer .contactContainerBox p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+.contactContainer .contactContainerBox .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.contactContainer .contactContainerBox .contact-form .formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.contactContainer .contactContainerBox .contact-form .formGroup label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.contactContainer .contactContainerBox .contact-form .formGroup input,
+.contactContainer .contactContainerBox .contact-form .formGroup textarea {
+  padding: 1rem 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.contactContainer .contactContainerBox .contact-form .formGroup input:focus,
+.contactContainer .contactContainerBox .contact-form .formGroup textarea:focus {
+  outline: none;
+  border-color: #999;
+}
+.contactContainer .contactContainerBox .contact-form .submit-button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #a66a32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contactContainer .contactContainerBox .contact-form .submit-button:hover {
+  background-color: #814e23;
 }
 
 /* color */

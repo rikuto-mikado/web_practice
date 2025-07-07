@@ -6,5 +6,72 @@
     justify-content: center;
     flex-direction: row;
     gap: .5rem;
+
+    background: #fceabb;
     
+    .contactContainerBox {
+        max-width: 700px;
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+
+        & h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark-black);
+        }
+
+        & p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            
+            .formGroup {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                
+                label {
+                    margin-bottom: 0.5rem;
+                    font-weight: bold;
+                }
+                
+                input,
+                textarea {
+                    padding: 1rem 1.2rem;
+                    border: 1px solid #ccc;
+                    border-radius: 6px;
+                    font-size: 1rem;
+                    font-family: inherit;
+                    
+                    &:focus {
+                        outline: none;
+                        border-color: #999;
+                    }
+                }
+            }
+
+            .submit-button {
+                margin-top: 1rem;
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+                background-color: #a66a32;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #814e23;
+                }
+            }
+        }
+    }
 }
