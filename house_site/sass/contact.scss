@@ -75,3 +75,25 @@
         }
     }
 }
+
+.form-message {
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  max-width: 600px;
+
+  &.success {
+    background-color: #e0f7e9;
+    color: #2e7d32;
+    border: 1.5px solid #2e7d32;
+  }
+
+  &.error {
+    background-color: #ffe6e6;
+    color: #d32f2f;
+    border: 1.5px solid #d32f2f;
+  }
+}

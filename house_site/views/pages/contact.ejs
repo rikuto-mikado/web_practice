@@ -5,6 +5,14 @@
             If you have any questions, ideas, or collaboration inquiries, feel free to reach out.
         </p>
 
+        <% if (successMessage) { %>
+            <div class="form-message success"><%= successMessage %></div>
+        <% } %>
+        
+        <% if (errorMessage) { %>
+            <div class="form-message error"><%= errorMessage %></div>
+        <% } %>
+
         <form action="/contact" method="POST" class="contact-form">
             <div class="formGroup">
                 <label for="name">Name</label>
@@ -22,7 +30,6 @@
             </div>
 
             <button type="submit" class="submit-button">Send</button>
-
         </form>
     </div>
 </section>

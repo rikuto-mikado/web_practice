@@ -39,15 +39,53 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/contact', (req, res) => {
-  res.render('pages/contact', { title: 'Contact Us' });
+   res.render('pages/contact', {
+      title: 'Contact Us',
+      successMessage: null,
+      errorMessage: null
+   });
 });
 
 /* --------------------------
    Contact Form (POST handler)
 -------------------------- */
-
-
-
+app.post('/contact', (req, res) => {
+   console.log("Received:", req.body);
+   const { name, email, message } = req.body;
+   
+   const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+         user: process.env.EMAIL_USER,
+         pass: process.env.EMAIL_PASS
+      }
+   });
+   
+   const mailOptions = {
+      from: email,
+      to: process.env.EMAIL_USER,
+      subject: `New Contact: ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+   };
+   
+   transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+         console.error("Error sending mail:", error);
+         return res.render('pages/contact', {
+            title: 'Contact Us',
+            successMessage: null,
+            errorMessage: 'Failed to send. Please try again.'
+         });
+      }
+      
+      console.log("Message sent:", info.response);
+      res.render('pages/contact', {
+         title: 'Contact Us',
+         successMessage: 'Message sent successfully!',
+         errorMessage: null
+      });
+   });
+});
 
 
 /* --------------------------
