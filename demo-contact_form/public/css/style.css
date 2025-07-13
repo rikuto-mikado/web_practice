@@ -5,26 +5,138 @@
     font-size: 100%;
 }
 
-#hero {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+body {
+    overflow-x: hidden;
 }
 
-#hero h1 {
-    color: hsl(237deg 74% 33% / 61%);
-    font-size: 5rem;
+main {
+    padding: 2rem;
 }
 
+/* header */
+.site-header {
+  background-color: #343a40;
+  color: white;
+  padding: 1rem;
+}
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: #ffc107;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+.site-footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Home Page */
+.home-main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-main h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.home-main p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* contact */
 #contact {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* form-styles */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form label {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+}
+
+
+/* Success & Error messages */
+.message {
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
 }

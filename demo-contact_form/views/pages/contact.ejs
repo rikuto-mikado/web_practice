@@ -1,0 +1,27 @@
+<main id="contact">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        
+        <% if (successMessage) { %>
+            <p class="message success"><%= successMessage %></p>
+        <% } %>
+        
+        <% if (errorMessage) { %>
+            <p class="message error"><%= errorMessage %></p>
+        <% } %>
+
+        <form action="/contact" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <button type="submit" class="btn-link">Send Message</button>
+        </form>
+
+    </div>
+</main>

@@ -24,6 +24,15 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/contact", (req, res) => {
+  res.render("pages/contact", {
+    title: "Contact Us",
+    successMessage: null,
+    errorMessage: null
+  });
+});
+
+
 // POST routing
 app.post("/contact", (req, res) => {
   const { name, email, message } = req.body;
