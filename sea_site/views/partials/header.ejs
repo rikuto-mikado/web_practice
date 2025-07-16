@@ -1,3 +1,28 @@
-<div class="site-header">
-    
-</div>
+<header id="headerSection">
+    <div class="headerContainer">
+        <h1 class="logo"><a href="/">BlueHope</a></h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger-overlay" aria-label="メニュー" aria-controls="overlay-menu" aria-expanded="false">
+            <span class="hamburger-overlay__line"></span>
+            <span class="hamburger-overlay__line"></span>
+            <span class="hamburger-overlay__line"></span>
+        </button>
+
+        <nav id="overlay-menu" class="nav-overlay" aria-hidden="true">
+            <div class="nav-overlay__content">
+                <ul class="nav-overlay__list">
+                    <li class="nav-overlay__item"><a href="/" class="nav-overlay__link">HOME</a></li>
+                    <li class="nav-overlay__item"><a href="/about" class="nav-overlay__link">ABOUT</a></li>
+                    <li class="nav-overlay__item"><a href="/contact" class="nav-overlay__link">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
