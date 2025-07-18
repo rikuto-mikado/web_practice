@@ -5,7 +5,7 @@
   padding: 1rem 0;
 }
 #headerSection .headerContainer {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
@@ -44,16 +44,18 @@
   color: var(--dark-black);
 }
 
+/* hamburger */
 .hamburger-overlay {
   position: absolute;
   top: 13px;
   right: 20px;
-  z-index: 1000;
   width: 48px;
   height: 48px;
   border: none;
   background: transparent;
   cursor: pointer;
+  display: none;
+  z-index: 1000;
 }
 .hamburger-overlay__line {
   position: absolute;
@@ -72,9 +74,6 @@
 .hamburger-overlay__line:nth-of-type(3) {
   top: 32px;
 }
-.hamburger-overlay.active .hamburger-overlay__line {
-  background-color: #fff;
-}
 .hamburger-overlay.active .hamburger-overlay__line:nth-of-type(1) {
   transform: translateY(9px) rotate(-45deg);
 }
@@ -84,16 +83,13 @@
 .hamburger-overlay.active .hamburger-overlay__line:nth-of-type(3) {
   transform: translateY(-9px) rotate(45deg);
 }
-
-.hamburger-overlay {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .hamburger-overlay {
     display: block;
   }
 }
+
+/* overlay nav */
 .nav-overlay {
   position: fixed;
   top: 0;
@@ -122,9 +118,6 @@
 }
 .nav-overlay.active .nav-overlay__item:nth-child(3) {
   transition-delay: 0.3s;
-}
-.nav-overlay.active .nav-overlay__item:nth-child(4) {
-  transition-delay: 0.4s;
 }
 .nav-overlay__content {
   position: absolute;
@@ -155,16 +148,49 @@
 .nav-overlay__link:hover {
   color: #4a90e2;
 }
-@media (max-width: 768px) {
-  .nav-overlay .nav {
-    display: none;
-  }
-  .nav-overlay .hamburger-overlay {
-    display: block;
-  }
-  .nav-overlay .nav-overlay {
-    display: block;
-  }
+
+#homeContainer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+#homeContainer .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.85;
+}
+#homeContainer .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+#homeContainer .homeContentBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+}
+#homeContainer .homeContentBox h1 {
+  font-size: 4.5rem;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=style.css.map */
