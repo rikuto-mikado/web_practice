@@ -1,49 +1,53 @@
+
+
 #homeContainer {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .bg-video {
+    width: 80%;
+    height: auto;
+    z-index: -2;
+    opacity: 0.85;
+    border-radius: 12px;
+  }
+
+  .home-image {
+    width: 80%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    border-radius: 12px;
+  }
+
+  .homeContentBox {
+    position: absolute;
+    width: 80%;
+    z-index: 1;
+    color: white;
+    text-align: center;
     
-    .bg-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        opacity: 0.85;
+    h1 {
+      font-size: 4rem;
+      line-height: 1.4;
     }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        z-index: -1;
-    }
-
-
-    
-    .homeContentBox {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        color: white;
-        text-align: center;
-        padding: 0 1rem;
-        
-        h1 {
-            font-size: 4.5rem;
-            line-height: 1.5;
-        }
-    }
+  }
 }
