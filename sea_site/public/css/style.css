@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* scss */
 /* header */
 #headerSection {
@@ -212,62 +213,113 @@
   }
 }
 
-#homeContainer {
+.homeContainer {
   position: relative;
   width: 100%;
-  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  /* 1つ目ヒーロー専用 */
+  /* 2つ目（ドネーション）は自然な縦伸び */
 }
-#homeContainer .bg-video {
-  width: 80%;
-  height: auto;
-  z-index: -2;
-  opacity: 0.85;
-  border-radius: 12px;
+.homeContainer.hero {
+  min-height: 100vh; /* 画面いっぱい */
+  justify-content: center;
 }
-#homeContainer .home-image {
+.homeContainer.donate {
+  padding: 2rem 0;
+}
+.homeContainer .bg-video,
+.homeContainer .home-image {
   width: 80%;
-  height: auto;
-  max-height: 40vh;
+  aspect-ratio: 16/9;
+  display: block;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  display: block;
-  margin: 0 auto;
+}
+.homeContainer .bg-video {
+  /* もう負の z-index は不要 */
+  position: relative;
+  z-index: 0;
+  opacity: 0.85;
+}
+.homeContainer .home-image {
   margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-#homeContainer .overlay {
+.homeContainer .overlay {
   position: absolute;
-  width: 80%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
-  border-radius: 12px;
-}
-#homeContainer .homeContentBox {
-  position: absolute;
-  width: 80%;
+  inset: 0;
+  width: 100%;
   z-index: 1;
-  color: white;
+}
+.homeContainer .homeContentBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
   text-align: center;
 }
-#homeContainer .homeContentBox h1 {
-  font-size: 4rem;
+.homeContainer .homeContentBox h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1.2;
+  margin: 0;
+}
+.homeContainer .donationContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+  width: 80%;
+}
+.homeContainer .donationContent .donationBox {
+  flex: 1 1 200px;
+  border: 1px solid #000;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+.homeContainer .donationContent .donationBox i {
+  font-size: 2rem;
+  line-height: 1;
+}
+.homeContainer .donationContent .donationBox h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+.homeContainer .donationContent .donationBox p {
+  margin: 0;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
-#homeContainer .donationContent {
+.homeContainer .paymentContent {
   display: flex;
-  flex-direction: row;
   gap: 1rem;
+  width: 80%;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
-#homeContainer .donationContent .donationBox {
+.homeContainer .paymentContent .paymentBox {
+  flex: 1 1 120px;
+  min-width: 120px;
   border: 1px solid #000;
-  width: 100%;
   padding: 1rem;
-  box-sizing: border-box;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f7f7f7;
+  transition: background 0.25s, transform 0.25s;
+}
+.homeContainer .paymentContent .paymentBox:hover {
+  background: #e2ecf7;
+  transform: translateY(-3px);
 }
 
 /*# sourceMappingURL=style.css.map */
