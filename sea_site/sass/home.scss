@@ -24,14 +24,9 @@
   }
 
   .bg-video {
-    /* もう負の z-index は不要 */
     position: relative;
     z-index: 0;
     opacity: 0.85;
-  }
-
-  .home-image {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   }
 
   .overlay {
@@ -98,37 +93,102 @@
       }
     }
   }
+
   .paymentContent {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
     gap: 1.5rem;
     margin-top: 2rem;
-
+    
+    .paymentContentBox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+    }
+    
     .paymentBox {
       border: 1px solid #000;
       border-radius: var(--radius);
       padding: .5rem 2.5rem;
-
-      & h4 {
+      background: #fff;
+      cursor: pointer;
+      transition: .15s;
+      h4 {
         font-size: 1rem;
+        margin: 0;
       }
     }
-
+    .paymentBox:hover {
+      background:#0d3e6e;
+      color:#fff;
+    }
+    
+    .paymentMethods {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.4rem;
+    }
   }
-}
-
-.donationTitle {
+  
+  .donationTitle {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-
-    & h2 {
+    
+    h2 {
       font-size: 2.5rem;
-      margin: 0;
-      margin-top: 2rem;
+      margin: 2rem 0 0;
     }
+  }
+  
+  .payLogo {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    padding: .5rem .9rem;
+    border:1px solid #d7dee6;
+    border-radius: 10px;
+    background:#fff;
+    font-size:.95rem;
+    font-weight:600;
+    line-height:1;
+  }
+  .payLogo.paypal { color:#0d3e6e; }
+  .payLogo.paypal i { font-size:1.15rem; line-height:1; }
+  
+  .donateNowBtn {
+    padding: 0.9rem 1.4rem;
+    width: 100%;
+    max-width: 360px;
+    background:#0d3e6e;
+    color:#fff;
+    border:0;
+    border-radius: 14px;
+    font-weight:700;
+    letter-spacing:.5px;
+    cursor:pointer;
+    transition:.18s;
+  }
+  
+  .donateNowBtn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+  }
+}
 
+.donationTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  & h2 {
+    font-size: 2.5rem;
+  }
 }
