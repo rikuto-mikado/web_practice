@@ -1,0 +1,43 @@
+<section class="homeContainer hero">
+    <img src="/images/night.png"
+    alt="Calm sea background"
+    class="home-image" />
+    <div class="overlay"></div>
+    <div class="homeContentBox">
+        <h2 class="black">Contact Us</h2>
+        
+        <form action="/contact" method="POST" class="contact-form">
+            <div class="formGroup">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="formGroup">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="formGroup">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" row="5" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Send</button>
+
+            <% if (successMessage) { %>
+                <div class="form-message success">
+                    <%= successMessage %>
+                </div>
+            <% } %>
+
+            <% if (errorMessage) { %>
+                <div class="form-message error">
+                    <%= errorMessage %>
+                </div>
+            <% } %>
+        </form>
+    </div>
+</section>
+
+
+

@@ -1,0 +1,123 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  width: 100%;
+  margin-inline: auto;
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    label {
+      font-weight: bold;
+      margin-bottom: .5rem;
+      font-size: 1rem;
+    }
+
+    input,
+    textarea {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+  }
+
+  .submit-button {
+    background-color: #fff;
+    color: #000;
+    border-radius: 6px;
+    padding: .8rem 2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #F5F5DC;
+    }
+  }
+}
+
+.form-message {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  padding: 1.2rem;
+  border-radius: 5px;
+  max-width: 600px;
+  margin-inline: auto;
+
+  &.success {
+    background-color: #e0f7e9;
+    color: #2e7d32;
+    border: 1.5px solid #2e7d32;
+  }
+
+  &.error {
+    background-color: #ffe6e6;
+    color: #d32f2f;
+    border: 1.5px solid #d32f2f;
+  }
+}
+
+
+
+
+/* 追加するだけ：フォームがあるヒーローだけを狙い撃ち  */
+@media (max-width: 480px) {
+
+  /* ① フォーム枠を画像内に収める  ---------------------------- */
+  .homeContainer.hero .contact-form {
+    width: 92%;                 /* 画像幅（100%）より少し内側 */
+    max-width: 480px;
+    margin: 1rem auto .5rem;    /* 上に少し余白 */
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+  }
+
+  /* ② 入力欄は箱いっぱい、角丸は小さめ ------------------------ */
+  .homeContainer.hero .contact-form .formGroup input,
+  .homeContainer.hero .contact-form .formGroup textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: .85rem;
+    padding: .5rem .9rem;
+    border-radius: 8px;
+  }
+  .homeContainer.hero .contact-form .formGroup textarea {
+    min-height: 5rem;
+    resize: vertical;
+  }
+
+  /* ③ ラベル＆テキスト縮小 ----------------------------------- */
+  .homeContainer.hero .contact-form .formGroup label {
+    font-size: .6rem;
+    margin-bottom: .3rem;
+    line-height: 1.1;
+  }
+
+  /* ④ 送信ボタンは幅いっぱい & 目立たせる -------------------- */
+  .homeContainer.hero .submit-button {
+    width: 100%;
+    padding: .55rem 0;
+    font-size: .9rem;
+    border-radius: 8px;
+  }
+
+  /* ⑤ 成功/失敗メッセージ枠も幅合わせ ------------------------ */
+  .homeContainer.hero .form-message {
+    max-width: 92%;
+    margin: .7rem auto 0;
+    font-size: .85rem;
+    padding: .5rem;
+    box-sizing: border-box;
+  }
+
+  .homeContainer.hero .homeContentBox .black {
+    color: #000;
+  }
+
+  
+}
+

@@ -1,10 +1,19 @@
+@charset "UTF-8";
 /* scss */
 /* header */
+body.no-scroll {
+  overflow: hidden;
+}
+
 #headerSection {
-  background-color: var(--light-black);
+  background: #ffffff;
   padding: 1rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  /* Logo  */
+  /* Desktop Nav  */
 }
 #headerSection .headerContainer {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -13,41 +22,45 @@
   align-items: center;
 }
 #headerSection .logo a {
-  color: var(--dark-white);
+  color: #111;
   text-decoration: none;
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
+  transition: color 0.25s;
 }
 #headerSection .logo a:hover {
-  color: var(--dark-black);
+  color: #555;
 }
-@media (max-width: 786px) {
+@media (max-width: 768px) {
   #headerSection .logo a {
     font-size: 1.4rem;
   }
 }
-@media (max-width: 768px) {
-  #headerSection .nav {
-    display: none;
-  }
-}
+#headerSection .nav { /* SP で非表示 */ }
 #headerSection .nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 #headerSection .nav ul li a {
-  color: var(--dark-white);
+  color: #111;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s;
 }
 #headerSection .nav ul li a:hover {
-  color: var(--dark-black);
+  color: #555;
+}
+@media (max-width: 768px) {
+  #headerSection .nav {
+    display: none;
+  }
 }
 
-/* hamburger */
+/* ─── Hamburger Button (SP) ─────────────── */
 .hamburger-overlay {
   position: absolute;
-  top: 13px;
+  top: 14px;
   right: 20px;
   width: 48px;
   height: 48px;
@@ -56,13 +69,14 @@
   cursor: pointer;
   display: none;
   z-index: 1000;
+  /* 三本線 */
 }
 .hamburger-overlay__line {
   position: absolute;
   left: 11px;
   width: 26px;
   height: 3px;
-  background-color: #fff;
+  background: #000;
   transition: all 0.6s;
 }
 .hamburger-overlay__line:nth-of-type(1) {
@@ -73,6 +87,9 @@
 }
 .hamburger-overlay__line:nth-of-type(3) {
   top: 32px;
+}
+.hamburger-overlay.active .hamburger-overlay__line {
+  background: #fff; /* 白線に切替 */
 }
 .hamburger-overlay.active .hamburger-overlay__line:nth-of-type(1) {
   transform: translateY(9px) rotate(-45deg);
@@ -89,18 +106,19 @@
   }
 }
 
-/* overlay nav */
+/* ─── Overlay Menu  ───────────────────────*/
 .nav-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   visibility: hidden;
   opacity: 0;
-  transition: all 0.6s;
+  transition: opacity 0.6s, visibility 0.6s;
   z-index: 900;
+  /* 表示状態 */
+  /* list */
 }
 .nav-overlay.active {
   visibility: visible;
@@ -141,7 +159,8 @@
   display: inline-block;
   padding: 20px;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -205,13 +224,47 @@
 .site-footer .footer-sections .footer-box .social-icons a:hover {
   color: #4a90e2;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 1.5rem 1rem;
+  }
+  .site-footer .footer-container {
+    gap: 1.5rem;
+  }
+  .site-footer .footer-brand {
+    text-align: center;
+  }
+  .site-footer .footer-brand .company-name {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
   .site-footer .footer-sections {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+  .site-footer .footer-sections .footer-box {
+    border: 1px solid #222;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+  }
+  .site-footer .footer-sections .footer-box h4 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+  .site-footer .footer-sections .footer-box p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .site-footer .footer-sections .footer-box .social-icons {
+    justify-content: center;
+    gap: 1.2rem;
+  }
+  .site-footer .footer-sections .footer-box .social-icons a {
+    font-size: 1.3rem;
   }
 }
-
 .homeContainer {
   position: relative;
   width: 100%;
@@ -386,6 +439,174 @@
 }
 .donationTitle h2 {
   font-size: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  .homeContainer.hero {
+    min-height: 50vh;
+    justify-content: center;
+  }
+  .homeContainer .bg-video,
+  .homeContainer .home-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  .homeContainer .homeContentBox {
+    width: 90%;
+  }
+  .homeContainer .homeContentBox h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .homeContainer .donationContent {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .homeContainer .donationBox {
+    padding: 0.9rem 1rem;
+  }
+  .homeContainer .donationBox i {
+    font-size: 1.6rem;
+  }
+  .homeContainer .donationBox .donationText h3 {
+    font-size: 1rem;
+  }
+  .homeContainer .donationBox .donationText p {
+    font-size: 0.85rem;
+  }
+  .homeContainer .paymentContent {
+    width: 100%;
+    gap: 1rem;
+  }
+  .homeContainer .paymentContent .paymentContentBox {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .homeContainer .paymentContent .paymentBox {
+    padding: 0.6rem 0.9rem;
+  }
+  .homeContainer .paymentContent .paymentBox h4 {
+    font-size: 0.95rem;
+  }
+  .homeContainer .paymentContent .paymentMethods {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .homeContainer .donateNowBtn {
+    width: 90%;
+    max-width: none;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+  .donationTitle h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-top: 1.2rem;
+  }
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  width: 100%;
+  margin-inline: auto;
+}
+.contact-form .formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.contact-form .formGroup label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.contact-form .formGroup input,
+.contact-form .formGroup textarea {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.contact-form .submit-button {
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+}
+.contact-form .submit-button:hover {
+  background-color: #F5F5DC;
+}
+
+.form-message {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  padding: 1.2rem;
+  border-radius: 5px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.form-message.success {
+  background-color: #e0f7e9;
+  color: #2e7d32;
+  border: 1.5px solid #2e7d32;
+}
+.form-message.error {
+  background-color: #ffe6e6;
+  color: #d32f2f;
+  border: 1.5px solid #d32f2f;
+}
+
+/* 追加するだけ：フォームがあるヒーローだけを狙い撃ち  */
+@media (max-width: 480px) {
+  /* ① フォーム枠を画像内に収める  ---------------------------- */
+  .homeContainer.hero .contact-form {
+    width: 92%; /* 画像幅（100%）より少し内側 */
+    max-width: 480px;
+    margin: 1rem auto 0.5rem; /* 上に少し余白 */
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  /* ② 入力欄は箱いっぱい、角丸は小さめ ------------------------ */
+  .homeContainer.hero .contact-form .formGroup input,
+  .homeContainer.hero .contact-form .formGroup textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+  }
+  .homeContainer.hero .contact-form .formGroup textarea {
+    min-height: 5rem;
+    resize: vertical;
+  }
+  /* ③ ラベル＆テキスト縮小 ----------------------------------- */
+  .homeContainer.hero .contact-form .formGroup label {
+    font-size: 0.6rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.1;
+  }
+  /* ④ 送信ボタンは幅いっぱい & 目立たせる -------------------- */
+  .homeContainer.hero .submit-button {
+    width: 100%;
+    padding: 0.55rem 0;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+  /* ⑤ 成功/失敗メッセージ枠も幅合わせ ------------------------ */
+  .homeContainer.hero .form-message {
+    max-width: 92%;
+    margin: 0.7rem auto 0;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+  }
+  .homeContainer.hero .homeContentBox .black {
+    color: #000;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

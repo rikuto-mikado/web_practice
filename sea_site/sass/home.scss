@@ -6,7 +6,7 @@
   align-items: center;
 
   &.hero {
-    min-height: 100vh;
+    min-height: 100vh;       
     justify-content: center;
   }
 
@@ -190,5 +190,77 @@
 
   & h2 {
     font-size: 2.5rem;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+
+  .homeContainer.hero {
+    min-height: 50vh;
+    justify-content: center;
+  }
+
+  .homeContainer {
+    
+    .bg-video,
+    .home-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+
+    .homeContentBox {
+      width: 90%;
+      h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    }
+
+    .donationContent {
+      width: 90%;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .donationBox {
+      padding: .9rem 1rem;
+      i { font-size: 1.6rem; }
+      .donationText {
+        h3 { font-size: 1rem; }
+        p  { font-size: .85rem; }
+      }
+    }
+
+    .paymentContent {
+      width: 100%;
+      gap: 1rem;
+
+      .paymentContentBox {
+        flex-wrap: wrap;
+        gap: .6rem;
+      }
+
+      .paymentBox {
+        padding: .6rem .9rem;
+        h4 { font-size: .95rem; }
+      }
+
+      .paymentMethods {
+        flex-wrap: wrap;
+        gap: .8rem;
+      }
+    }
+
+    .donateNowBtn {
+      width: 90%;
+      max-width: none;
+      font-size: 1rem;
+      padding: .8rem;
+    }
+  }
+
+  .donationTitle h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-top: 1.2rem;
   }
 }
