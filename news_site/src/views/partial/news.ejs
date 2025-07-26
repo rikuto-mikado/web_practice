@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node.js News</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Node.js News</title>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header_logo">Node.Js News</div>
-        <div class="header__search">Search</div>
-    </header>
+  <header class="header">
+    <div class="header_logo">Node.Js News</div>
+    <div class="header__search">Search</div>
+  </header>
 
-    <div class="wrapper">
-        <div class="news">
-            <% articles.forEach(function(article, index) { %>
-                <a href="#" class="news__card">
-                    <h2><%- article.title.rendered %></h2>
-                    <p><%- article.excerpt.rendered %></p>
-                </a>
-            <% }) %>
-        </div>
+  <div class="wrapper">
+    <div class="news">
+      <% articles.forEach(function(article){ %>
+        <a href="<%= article.link %>" class="news__card">
+            <% if (article.thumbnail_url) { %>
+                <img
+                src="/img?src=<%= encodeURIComponent(article.thumbnail_url || '') %>"
+                alt="<%- article.title.rendered %>"
+                loading="lazy" decoding="async" width="400" height="225"
+                onerror="this.src='/image/placeholder.jpg'">
+            <% } else { %>
+                <img
+                src="/image/placeholder.jpg"
+                alt="" loading="lazy" decoding="async"
+                width="400" height="225">
+            <% } %>
+            
+            <h2><%= article.title.rendered %></h2>
+            <p><%- article.excerpt.rendered %></p>
+        </a>
+      <% }) %>
     </div>
-
-    <% articles.forEach(function(article, index) {%>
-
-        <%- article.title.rendered %>
-    
-    <% }) %>
+  </div>
 </body>
 </html>

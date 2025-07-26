@@ -3,7 +3,6 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-/* ← ここで複数の views パスを設定 */
 app.set('views', [
   path.join(__dirname, 'src', 'views'),
   path.join(__dirname, 'src', 'views', 'partial'),
