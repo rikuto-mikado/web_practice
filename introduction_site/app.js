@@ -13,12 +13,20 @@ const app = express();
 /* --------------------------
    Middleware Settings
 -------------------------- */
+
+// Parse form data
 app.use(bodyParser.urlencoded({ extended: false}));
 
-app.use(express.static(path.join(__dirname, "public")));
+// Serve static files (CSS, JS, images, etc.)
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+// Set up EJS with layout support
+app.use(expressLayouts);
+app.set('layout', 'layout');
+
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 
 /* --------------------------
