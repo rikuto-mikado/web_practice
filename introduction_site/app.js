@@ -24,20 +24,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressLayouts);
 app.set('layout', 'layout');
 
-// Set EJS as the view engine
+// views
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(expressLayouts);
+app.set('layout', 'layout');
 
 
 /* --------------------------
    Page Routing
 -------------------------- */
 app.get("/", (req, res) => {
-    res.render("pages/home", {title: "Home"});
+  res.render("pages/home", { title: "Home", active: "bio" });
 });
 
 app.get("/contact", (req, res) => {
-    res.render("pages/contact", {title: "About Us"})
+  res.render("pages/contact", { title: "Contact", active: "contact" });
 });
 
 
