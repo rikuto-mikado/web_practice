@@ -1,5 +1,5 @@
 #hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 200px);
     background-color: var(--light-orange);
     padding: 2rem;
     
@@ -11,9 +11,9 @@
 #hero .hero-frame {
     max-width: 1200px;
     margin: 2rem auto;
-    border: 1px solid var(--frame-color, #b9b1a9);
+    border: 2px solid var(--frame-color, #b9b1a9);
     border-radius: 8px;
-    padding: 6rem;
+    padding: 7rem;
     
     display: flex;
     flex-direction: row;
@@ -75,6 +75,8 @@
 @media (max-width: 768px) {
     #hero .hero-frame {
         flex-direction: column;
+        border: none;
+        padding: 0rem 6rem;
     }
 
     #hero .hero-frame > .heroText,
@@ -84,4 +86,67 @@
     }
     
     #hero .hero-frame .intro-image { justify-content: center; }
+}
+
+// hero_text
+#hero_text {
+    min-height: calc(100vh - 200px);
+    background-color: var(--light-orange);
+    padding: 2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero_text .hero-frame {
+    max-width: 1200px;
+    margin: 2rem auto;
+    border: 2px solid var(--frame-color, #b9b1a9);
+    border-radius: 8px;
+    padding: 7rem;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    gap: 2rem;
+}
+
+#hero_text .hero-frame .heroText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#hero_text .hero-frame h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+#hero_text .hero-frame p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    
+    .highlight-olive {
+        color: var(--olive);
+        font-weight: bold;
+    }
+}
+
+
+#hero_text .hero-frame .intro-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+    }
 }
