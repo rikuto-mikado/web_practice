@@ -44,157 +44,115 @@
   transform: scaleX(1);
 }
 
+@media (max-width: 768px) {
+  .siteHeader {
+    padding: 2rem 1rem;
+  }
+}
 @media (max-width: 640px) {
-  .primary-nav {
+  .primaryNav {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 8px;
   }
 }
 @media (max-width: 360px) {
-  .primary-nav {
+  .primaryNav {
     grid-template-columns: 1fr;
   }
 }
-#hero {
-  min-height: calc(100vh - 200px);
-  background-color: var(--light-orange);
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#hero .hero-frame {
+.hero-frame {
   max-width: 1200px;
   margin: 2rem auto;
-  border: 2px solid var(--frame-color, #b9b1a9);
   border-radius: 8px;
   padding: 7rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem;
 }
-
-#hero .hero-frame .heroText {
+.hero-frame .heroText {
+  flex: 0 0 40%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 1rem;
 }
-
-#hero .hero-frame h1 {
+.hero-frame .heroText h1 {
   font-size: 3rem;
   margin: 0;
 }
-
-#hero .hero-frame p {
+.hero-frame .heroText p {
   font-size: 1.2rem;
+  text-transform: uppercase;
 }
-#hero .hero-frame p .highlight-olive {
+.hero-frame .heroText p .highlight-olive {
   color: var(--olive);
   font-weight: bold;
 }
-
-#hero .hero-frame .social-icons {
+.hero-frame .intro-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.hero-frame .intro-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+.hero-frame .social-icons {
   display: flex;
   gap: 1rem;
   margin-top: 0.5rem;
 }
-#hero .hero-frame .social-icons img {
+.hero-frame .social-icons img {
   width: 30px;
   height: 30px;
   transition: transform 0.3s ease;
 }
-#hero .hero-frame .social-icons img:hover {
+.hero-frame .social-icons img:hover {
   transform: scale(1.1);
 }
 
-#hero .hero-frame .intro-image {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-#hero .hero-frame .intro-image img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  #hero .hero-frame {
-    flex-direction: column;
-    border: none;
-    padding: 0rem 6rem;
-  }
-  #hero .hero-frame > .heroText,
-  #hero .hero-frame > .intro-image {
-    flex: 0 0 auto;
-    width: 100%;
-  }
-  #hero .hero-frame .intro-image {
-    justify-content: center;
-  }
-}
-#hero_text {
+.hero,
+.hero_text {
   min-height: calc(100vh - 200px);
-  background-color: var(--light-orange);
+  background-color: #F0E9E9;
   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#hero_text .hero-frame {
-  max-width: 1200px;
-  margin: 2rem auto;
-  border: 2px solid var(--frame-color, #b9b1a9);
-  border-radius: 8px;
-  padding: 7rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+@media (max-width: 768px) {
+  .hero-frame {
+    flex-direction: column;
+    padding: 0 1.5rem;
+  }
+  .hero-frame > .heroText,
+  .hero-frame > .intro-image {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .hero-frame .intro-image {
+    justify-content: center;
+  }
+  .hero-frame .heroText {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-frame .heroText h1 {
+    text-align: center;
+  }
 }
-
-#hero_text .hero-frame .heroText {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 1rem;
-}
-
-#hero_text .hero-frame h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-#hero_text .hero-frame p {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-#hero_text .hero-frame p .highlight-olive {
-  color: var(--olive);
-  font-weight: bold;
-}
-
-#hero_text .hero-frame .intro-image {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-#hero_text .hero-frame .intro-image img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* color */

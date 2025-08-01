@@ -41,9 +41,16 @@
     &.is-active::after { transform: scaleX(1); }
 }
 
-@media (max-width: 640px) {
-  .primary-nav { grid-template-columns: repeat(2, 1fr); row-gap: 8px; }
+@media (max-width: 768px) {
+    .siteHeader {
+        padding: 2rem 1rem;
+    }
 }
+
+@media (max-width: 640px) {
+  .primaryNav { grid-template-columns: repeat(2, 1fr); row-gap: 8px; }
+}
+
 @media (max-width: 360px) {
-  .primary-nav { grid-template-columns: 1fr; }
+  .primaryNav { grid-template-columns: 1fr; }
 }
