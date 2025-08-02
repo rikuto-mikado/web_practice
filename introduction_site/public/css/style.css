@@ -46,7 +46,7 @@
 
 @media (max-width: 768px) {
   .siteHeader {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 }
 @media (max-width: 640px) {
@@ -58,6 +58,72 @@
 @media (max-width: 360px) {
   .primaryNav {
     grid-template-columns: 1fr;
+  }
+}
+/* footer */
+.site-footer {
+  background-color: var(--light-orange);
+  color: var(--dark-white);
+  padding: 2rem 1rem;
+}
+.site-footer .footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.site-footer .footer-brand {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.site-footer .footer-brand .footer-logo {
+  width: 50px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.site-footer .footer-brand .company-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.site-footer .footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.site-footer .footer-sections .footer-box {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid var(--black);
+  padding: 1rem;
+}
+.site-footer .footer-sections .footer-box h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+.site-footer .footer-sections .footer-box p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+.site-footer .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.site-footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+.site-footer .social-icons img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .site-footer .footer-sections {
+    flex-direction: column;
+  }
+  .site-footer .footer-sections .footer-box {
+    width: 100%;
+    flex-grow: 0;
   }
 }
 .hero-frame {
@@ -132,11 +198,12 @@
   .hero-frame {
     flex-direction: column;
     padding: 0 1.5rem;
+    gap: 3rem;
   }
   .hero-frame > .heroText,
   .hero-frame > .intro-image {
     flex: 0 0 auto;
-    width: 100%;
+    width: 80%;
   }
   .hero-frame .intro-image {
     justify-content: center;
@@ -147,6 +214,9 @@
   }
   .hero-frame .heroText h1 {
     text-align: center;
+  }
+  .hero:first-of-type .hero-frame {
+    flex-direction: column-reverse;
   }
 }
 *,

@@ -81,11 +81,12 @@
     .hero-frame {
         flex-direction: column;
         padding: 0 1.5rem;
+        gap: 3rem;
         
         > .heroText,
         > .intro-image {
             flex: 0 0 auto;
-            width: 100%;
+            width: 80%;
         }
         
         .intro-image {
@@ -99,6 +100,12 @@
             h1 {
                 text-align: center;
             }
+        }
+    }
+
+    .hero:first-of-type {
+        .hero-frame {
+            flex-direction: column-reverse;
         }
     }
 }
