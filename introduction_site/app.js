@@ -18,11 +18,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false}));
 
 // Serve static files (CSS, JS, images, etc.)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Set up EJS with layout support
-app.use(expressLayouts);
-app.set('layout', 'layout');
+app.use(express.static(path.join(__dirname, 'public')));
 
 // views
 app.set('view engine', 'ejs');
@@ -34,14 +34,43 @@ app.set('layout', 'layout');
 /* --------------------------
    Page Routing
 -------------------------- */
-app.get("/", (req, res) => {
-  res.render("pages/home", { title: "Home", active: "bio" });
-});
+const pageRoutes = [
+    {
+        path: '/',
+        template: 'pages/home',
+        title: 'Home',
+        active: 'bio'
+    },
+    {
+        path: '/portfolio',
+        template: 'pages/portfolio',
+        title: 'Portfolio',
+        active: 'portfolio'
+    },
+    {
+        path: '/contact',
+        template: 'pages/contact',
+        title: 'Contact',
+        active: 'contact'
+    },
+    {
+        path: '/blog',
+        template: 'pages/blog',
+        title: 'Blog',
+        active: 'blog'
+    },
+];
 
-app.get("/contact", (req, res) => {
-  res.render("pages/contact", { title: "Contact", active: "contact" });
+pageRoutes.forEach(route => {
+    app.get(route.path, (req, res) => {
+        res.render(route.template, {
+            title: route.title,
+            active: route.active,
+            successMessage: null,
+            errorMessage: null
+        });
+    });
 });
-
 
 /* --------------------------
    Contact Form (POST handler)
