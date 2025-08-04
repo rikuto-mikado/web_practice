@@ -1,0 +1,107 @@
+.contactContainerBox {
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    border-radius: 8px;
+    padding: 3rem;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--dark-black);
+    }
+    
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100%;
+
+        .formGroup {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            label {
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+                color: #333;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                box-sizing: border-box;
+                
+                padding: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 1rem;
+
+                &:focus {
+                    outline: none;
+                    border-color: #a66a32; /* フォーカス時の色をボタンと合わせる */
+                    box-shadow: 0 0 5px rgba(166, 106, 50, 0.3); /* フォーカス時に少し光彩を追加 */
+                }
+            }
+        }
+
+        .submit-button {
+            margin-top: 1rem;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            background-color: #a66a32;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #814e23;
+            }
+        }
+    }
+}
+
+.form-message {
+  text-align: center;
+  margin: 1.5rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 600px;
+
+  &.success {
+    background-color: #e0f7e9;
+    color: #2e7d32;
+    border: 1.5px solid #2e7d32;
+  }
+
+  &.error {
+    background-color: #ffe6e6;
+    color: #d32f2f;
+    border: 1.5px solid #d32f2f;
+  }
+}
+
+.contactContainer {
+    min-height: calc(100vh - 200px);
+    background-color: #F0E9E9;
+    padding: 2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
