@@ -1,35 +1,41 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
 const express = require("express");
 const path = require("path");
-const nodemailer = require("nodemailer");
-const dotenv = require("dotenv");
-const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer"); 
 const expressLayouts = require("express-ejs-layouts");
-
-dotenv.config();
 
 const app = express();
 
-
-/* --------------------------
-   Middleware Settings
--------------------------- */
-
-// Parse form data
-app.use(bodyParser.urlencoded({ extended: false}));
-
-// Serve static files (CSS, JS, images, etc.)
 app.use(express.urlencoded({ extended: true }));
+
 app.use(express.json());
 
-// Set up EJS with layout support
-app.use(express.static(path.join(__dirname, 'public')));
-
-// views
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
 app.use(expressLayouts);
-app.set('layout', 'layout');
+app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, "public")));
 
+
+/* --------------------------
+   Site content data
+-------------------------- */
+const blogPosts = [
+    {
+        id: 1,
+        title: "NodemailerでGmail送信時に 'Missing credentials' エラーが出た話",
+        date: "2025-08-04",
+        summary: "原因は.envファイルの読み込み失敗でした。dotenvが正しく動作しているか確認する方法と、具体的な解決策をまとめます。",
+        slug: "nodemailer-missing-credentials-error" // 記事ページ用のURL
+    },
+    {
+        id: 2,
+        title: "EJSで 'active is not defined' エラー？原因はPOST処理のrenderでした",
+        date: "2025-08-03",
+        summary: "GETリクエストでは問題なかったのに、フォーム送信後にエラーが。POSTリクエスト時のres.renderにも忘れずに変数を渡しましょう。",
+        slug: "ejs-active-is-not-defined"
+    },
+];
 
 /* --------------------------
    Page Routing
@@ -53,12 +59,6 @@ const pageRoutes = [
         title: 'Contact',
         active: 'contact'
     },
-    {
-        path: '/blog',
-        template: 'pages/blog',
-        title: 'Blog',
-        active: 'blog'
-    },
 ];
 
 pageRoutes.forEach(route => {
@@ -69,6 +69,14 @@ pageRoutes.forEach(route => {
             successMessage: null,
             errorMessage: null
         });
+    });
+});
+
+app.get('/blog', (req, res) => {
+    res.render('pages/blog', {
+        title: 'Blog',
+        active: 'blog',
+        posts: blogPosts
     });
 });
 
@@ -96,9 +104,10 @@ app.post("/contact", (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error("Rrror sending mail:", error);
+            console.error("Error sending mail:", error);
             return res.render("pages/contact", {
-                title: "Contact Us",
+                title: "Contact",
+                active: "contact",
                 successMessage: null,
                 errorMessage: "Failed to send. Please try again."
             });
@@ -106,7 +115,8 @@ app.post("/contact", (req, res) => {
 
         console.log("Message sent:", info.response);
         res.render("pages/contact", {
-            title: "Contact Us",
+            title: "Contact",
+            active: "contact",
             successMessage: "Message sent successfully!!",
             errorMessage: null
         });
