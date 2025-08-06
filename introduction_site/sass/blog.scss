@@ -4,7 +4,7 @@
 .blog-container {
     padding: 4rem 2rem;
     background-color: #F0E9E9;
-    min-height: calc(100vh - 200px); // フッターが下に来るように高さを確保
+    min-height: calc(100vh - 200px);
 
     .container-inner {
         max-width: 800px;
@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    text-align: left; // 記事内容は左揃えに
+    text-align: left;
 }
 
 
@@ -56,19 +56,23 @@
 
         &__title {
             margin-bottom: 0.75rem;
-        font-size: 1.5rem;
-        
-        a {
-            text-decoration: none;
-            color: #333;
-            transition: color 0.2s ease;
-
-            &:hover {
-                color: #a66a32; // コンタクトフォームのボタンと同じ色合い
+            font-size: 1.5rem;
+            
+            a {
+                text-decoration: none;
+                color: #333;
+                transition: color 0.2s ease;
+                
+                &:hover {
+                    color: #a66a32;
+                }
             }
         }
-    }
 
-
+        &__summary {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
     }
 }

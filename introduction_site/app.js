@@ -23,19 +23,20 @@ app.use(express.static(path.join(__dirname, "public")));
 const blogPosts = [
     {
         id: 1,
-        title: "NodemailerでGmail送信時に 'Missing credentials' エラーが出た話",
-        date: "2025-08-04",
-        summary: "原因は.envファイルの読み込み失敗でした。dotenvが正しく動作しているか確認する方法と、具体的な解決策をまとめます。",
-        slug: "nodemailer-missing-credentials-error" // 記事ページ用のURL
+        title: "How I Fixed Nodemailer's 'Missing Credentials' Error with Gmail",
+        date: "August 04, 2025",
+        summary: "This error was misleading. The root cause was a failure to load my .env file. Here's a quick guide on how to debug dotenv and solve this EAUTH issue for good.",
+        slug: "nodemailer-missing-credentials-error"
     },
     {
         id: 2,
-        title: "EJSで 'active is not defined' エラー？原因はPOST処理のrenderでした",
-        date: "2025-08-03",
-        summary: "GETリクエストでは問題なかったのに、フォーム送信後にエラーが。POSTリクエスト時のres.renderにも忘れずに変数を渡しましょう。",
+        title: "Why My EJS Template Threw an 'active is not defined' Error After a Form POST",
+        date: "August 03, 2025",
+        summary: "The page worked fine on a GET request, but crashed after submitting a form. Let's dive into why you must pass all required variables to res.render() in your POST routes, too.",
         slug: "ejs-active-is-not-defined"
     },
 ];
+
 
 /* --------------------------
    Page Routing
@@ -79,6 +80,24 @@ app.get('/blog', (req, res) => {
         posts: blogPosts
     });
 });
+
+app.get('/blog/:slug', (req, res) => {
+    
+    const postSlug = req.params.slug;
+    
+    const post = blogPosts.find(p => p.slug === postSlug);
+
+    if (!post) {
+        return res.status(404).send('Post not found');
+    }
+
+    res.render('pages/post-detail', {
+        title: post.title,
+        active: 'blog',
+        post: post
+    });
+});
+
 
 /* --------------------------
    Contact Form (POST handler)

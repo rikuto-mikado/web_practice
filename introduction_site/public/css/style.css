@@ -384,6 +384,11 @@
 .post-item__date__title a:hover {
   color: #a66a32;
 }
+.post-item__date__summary {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
 
 /* color */
 :root {
