@@ -1,0 +1,35 @@
+<section class="portfolio-container">
+    <div class="container-inner">
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-subtitle">Here are some of the projects I've worked on.</p>
+
+        <div class="portfolio-grid">
+            <% portfolioItems.forEach(item => { %>
+                <div class="portfolio-card">
+                    <div class="card-image">
+                        <img src="<%= item.image %>" alt="<%= item.title %> screenshot">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title"><%= item.title %></h3>
+                        <p class="card-summary"><%= item.summary %></p>
+                        
+                        <div class="card-tags">
+                            <% item.tags.forEach(tag => { %>
+                                <span class="tag"><%= tag %></span>
+                            <% }) %>
+                        </div>
+                        
+                        <div class="card-description">
+                            <%- item.description %>
+                        </div>
+
+                        <div class="card-links">
+                            <a href="<%= item.liveUrl %>" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                            <a href="<%= item.repoUrl %>" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
