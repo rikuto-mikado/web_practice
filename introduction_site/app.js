@@ -1,10 +1,21 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
+const blogPosts = require('./data/blogPosts.json');
+const portfolioItems = require('./data/portfolioItems.json');
+
 const express = require("express");
 const path = require("path");
 const nodemailer = require("nodemailer"); 
 const expressLayouts = require("express-ejs-layouts");
+
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    }
+});
 
 const app = express();
 
@@ -15,77 +26,6 @@ app.use(express.json());
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, "public")));
-
-
-/* --------------------------
-   Site content data
--------------------------- */
-const blogPosts = [
-    {
-        id: 1,
-        title: "My Contact Form Failed, But Nodemailer and Dotenv Were Not the Problem",
-        date: "August 04, 2025",
-        summary: "I set up my .env file with a Google App Password and configured Nodemailer perfectly. So why was my contact form data not arriving? The issue was much simpler than I thought.",
-        slug: "contact-form-middleware-fix",
-        description: `
-        <p>One of the most exciting features I built for this site was the contact form. I dove into Nodemailer, created a Google App Password for security, and stored it safely in a <code>.env</code> file. Everything on the Nodemailer side seemed perfect.</p>
-        <p>But when I submitted a test message, the email arrived with 'undefined' fields. I checked the server logs and saw this:</p>
-        <pre><code>Received: {}</code></pre>
-        <p>My <code>req.body</code> object was empty! The form data wasn't even reaching my POST handler. After some head-scratching, I realized my mistake wasn't in the mailing logic, but in the server's setup.</p>
-        <h2>The Missing Piece: express.urlencoded()</h2>
-        <p>I had forgotten a crucial piece of middleware in my <code>app.js</code>. To handle URL-encoded data from a standard HTML form, you must tell Express how to parse it. The solution was a single line of code:</p>
-        <pre><code>// This line was missing! app.use(express.urlencoded({ extended: true }));</code></pre>
-        <p>Once I added this middleware, <code>req.body</code> was populated correctly, and my contact form started working as expected. It was a great lesson: sometimes the problem isn't in the complex part of the code, but in the fundamental setup.</p>
-        `
-    },
-    {
-        id: 2,
-        title: "A Tale of Two Blog Posts: Solving a Simple SCSS Responsive Layout Bug",
-        date: "August 03, 2025",
-        summary: "My blog detail page looked perfect on my desktop. But on mobile, one post looked fine, while another had its layout completely broken. The culprit? A single long title.",
-        slug: "scss-responsive-layout-bug",
-        description: `
-        <p>When I first built my blog's article pages, I was proud of how clean they looked. I tested the first article on my phone, and it was perfect. Then I checked the second one, and the layout was a mess—the white content box was overflowing and the background was cut off.</p>
-        <h2>The Problem: Unbreakable Content vs. Flexbox</h2>
-        <p>Using my browser's developer tools, I discovered the issue. The second article's title was very long, and it refused to wrap. This long string of text was forcing its container (the white box) to become wider than the phone's screen.</p>
-        <p>My main page container was a flexbox (<code>display: flex</code>). By default, a flex item won't shrink smaller than its content's minimum size. In this case, the 'unbreakable' title set a huge minimum size, which broke the entire layout.</p>
-        <h2>The Two-Step Solution in SCSS</h2>
-        <p>The fix was surprisingly simple and required two key additions to my SCSS:</p>
-        <ol>
-        <li><strong>On the content box:</strong> I added <code>width: 100%;</code>. This tells the item to strictly adhere to the width of its parent container, preventing it from overflowing.</li>
-        <li><strong>On the title itself:</strong> As a safeguard, I added <code>overflow-wrap: break-word;</code>. This CSS property forces any long string of text (like a URL or a long title) to break and wrap to the next line if it would otherwise overflow.</li>
-        </ol>
-        <p>This experience was a powerful reminder that responsive design isn't just about screen sizes; it's about gracefully handling unpredictable content. A small SCSS fix made all the difference.</p>
-        `
-    },
-];
-
-
-/* --------------------------
-   Portfolio Content Data
--------------------------- */
-const portfolioItems = [
-    {
-        id: 1,
-        title: "My Personal Portfolio & Blog",
-        image: "/images/portfolio-site-screenshot.jpg", // 仮の画像パス
-        summary: "A fully functional portfolio website built from scratch with Node.js, Express, and EJS, featuring a dynamic blog and a working contact form.",
-        description: `
-        <p>This very website serves as my primary portfolio piece. My goal was to build a server-side rendered application without relying on a large frontend framework. I handled everything from routing and middleware to dynamic page generation with EJS.</p>
-        <h4>Key Features & Challenges:</h4>
-        <ul>
-        <li><strong>Contact Form with Nodemailer:</strong> I implemented a secure contact form that sends emails via Gmail using an App Password and environment variables (dotenv). Debugging the middleware (express.urlencoded) was a key learning experience.</li>
-        <li><strong>Dynamic Blog System:</strong> The blog content is managed directly within the app, demonstrating how to pass data from the server to templates and create dynamic detail pages.</li>
-        <li><strong>Responsive Design with SCSS:</strong> I wrote all the CSS from scratch using SCSS, focusing on creating a clean, responsive layout that works seamlessly on both desktop and mobile devices.</li>
-        </ul>
-        `,
-        tags: ['Node.js', 'Express', 'EJS', 'SCSS', 'Nodemailer'],
-        liveUrl: "#",
-        repoUrl: "https://github.com/your-username/your-repo-name"
-    },
-
-];
-
 
 /* --------------------------
    Page Routing
@@ -153,20 +93,20 @@ app.get('/portfolio', (req, res) => {
    Contact Form (POST handler)
 -------------------------- */
 app.post("/contact", (req, res) => {
-    console.log("Received", req.body);
     const { name, email, message } = req.body;
-    
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        }
-    });
+    if (!name || !email || !message) {
+        return res.render("pages/contact", {
+            title: "Contact",
+            active: "contact",
+            successMessage: null,
+            errorMessage: "Please fill in all fields."
+        });
+    }
 
     const mailOptions = {
-        from: email,
+        from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
+        replyTo: email,
         subject: `New Contact: ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
     };
@@ -190,6 +130,11 @@ app.post("/contact", (req, res) => {
             errorMessage: null
         });
     });
+});
+
+
+app.use((req, res, next) => {
+    res.status(404).render('pages/404', { title: 'Page Not Found' });
 });
 
 

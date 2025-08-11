@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "My Personal Portfolio & Blog",
+    "image": "/images/portfolio-site-screenshot.jpg",
+    "summary": "A fully functional portfolio website built from scratch with Node.js, Express, and EJS, featuring a dynamic blog and a working contact form.",
+    "description": "<p>This very website serves as my primary portfolio piece. My goal was to build a server-side rendered application without relying on a large frontend framework. I handled everything from routing and middleware to dynamic page generation with EJS.</p><h4>Key Features & Challenges:</h4><ul><li><strong>Contact Form with Nodemailer:</strong> I implemented a secure contact form that sends emails via Gmail using an App Password and environment variables (dotenv). Debugging the middleware (express.urlencoded) was a key learning experience.</li><li><strong>Dynamic Blog System:</strong> The blog content is managed directly within the app, demonstrating how to pass data from the server to templates and create dynamic detail pages.</li><li><strong>Responsive Design with SCSS:</strong> I wrote all the CSS from scratch using SCSS, focusing on creating a clean, responsive layout that works seamlessly on both desktop and mobile devices.</li></ul>",
+    "tags": ["Node.js", "Express", "EJS", "SCSS", "Nodemailer"],
+    "liveUrl": "#",
+    "repoUrl": "https://github.com/your-username/your-repo-name"
+  }
+]
